@@ -1,0 +1,350 @@
+/* DestinyGuessr - Main Stylesheet */
+
+/* Global Styles */
+:root {
+    --primary-color: #5d5cec;
+    --secondary-color: #242635;
+    --accent-color: #7e57c2;
+    --background: #0f1015;
+    --text-color: #eaeaea;
+    --border-color: #2c2e3e;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+    --warning-color: #ff9800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container, .game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(94, 114, 228, 0.5);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(94, 114, 228, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Home Page Styles */
+.game-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.game-intro p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.game-intro .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.how-to-play {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.how-to-play ol {
+    margin-left: 2rem;
+}
+
+.how-to-play li {
+    margin-bottom: 0.8rem;
+}
+
+/* Game Page Styles */
+.game-container {
+    height: 100vh;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guess-interface {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.guess-step {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.destination-options, .area-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.destination-option, .area-option {
+    background-color: var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.destination-option:hover, .area-option:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.destination-option.selected, .area-option.selected {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 2px white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.result-feedback {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.correct {
+    color: var(--success-color);
+}
+
+.incorrect {
+    color: var(--error-color);
+}
+
+/* Results Page Styles */
+.results-summary {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.final-score {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.rank-badge {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+#rank-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.round-breakdown {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.round-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.round-result:last-child {
+    border-bottom: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    .destination-options, .area-options {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .game-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .image-container {
+        height: 250px;
+    }
+
+    .container, .game-container {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

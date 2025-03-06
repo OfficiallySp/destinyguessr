@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - DestinyGuessr</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DestinyGuessr</h1>
+            <p>Your Results</p>
+        </header>
+
+        <main>
+            <div class="results-summary">
+                <h2>Game Summary</h2>
+                <div class="final-score">
+                    <p>Final Score: <span id="final-score">0</span> points</p>
+                </div>
+
+                <div class="rank-badge">
+                    <h3>Your Guardian Rank:</h3>
+                    <div id="rank-title">New Light</div>
+                    <div id="rank-description">You're just getting started with Destiny 2 locations. Keep exploring!</div>
+                </div>
+            </div>
+
+            <div class="round-breakdown">
+                <h3>Round Breakdown</h3>
+                <div id="rounds-container">
+                    <!-- Round results will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="play-again" class="btn btn-primary">Play Again</button>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                <button id="share-results" class="btn btn-accent">Share Results</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>DestinyGuessr is a fan-made project and is not affiliated with Bungie, Inc.</p>
+            <p>Destiny, Destiny 2, and all related content are trademarks of Bungie, Inc.</p>
+        </footer>
+    </div>
+
+    <script src="js/results.js"></script>
+</body>
+</html>
