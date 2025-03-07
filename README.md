@@ -17,7 +17,7 @@ A Destiny 2-themed location guessing game inspired by GeoGuessr. Test your knowl
 - Achieve Guardian ranks based on your performance
 - Compare and share your results with friends
 
-## Setup Instructions
+## Contribution Instructions
 
 1. Clone this repository or download the files
 2. Create an `assets/locations` directory structure to store your Destiny 2 screenshots
@@ -29,11 +29,10 @@ A Destiny 2-themed location guessing game inspired by GeoGuessr. Test your knowl
 
 4. Update the `locationData` array in `js/locations.js` with entries for your screenshots
 
-5. Host the site on GitHub Pages by enabling GitHub Pages in your repository settings
 
 ## Adding Your Own Screenshots
 
-1. Take screenshots while playing Destiny 2 (the more distinctive the location, the better)
+1. Take screenshots while playing Destiny 2
 2. Name them according to the convention mentioned above
 3. Place them in the appropriate folders
 4. Update the `locationData` array in `js/locations.js` with entries for each screenshot
@@ -48,12 +47,6 @@ Example entry:
     difficulty: "medium"
 }
 ```
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
 
 ## License
 
