@@ -7,14 +7,45 @@
 const locations = {
     destinations: [
         {
-            id: "earth",
-            name: "Earth",
+            id: "edz",
+            name: "EDZ",
             areas: [
-                { id: "edz", name: "European Dead Zone" },
-                { id: "cosmodrome", name: "Cosmodrome" },
-                { id: "tower", name: "The Tower" },
-                { id: "helm", name: "The H.E.L.M." },
-                { id: "last_city", name: "The Last City" }
+                { id: "outskirts", name: "Outskirts" },
+                { id: "trostland", name: "Trostland" },
+                { id: "winding_cove", name: "Winding Cove" },
+                { id: "the_sludge", name: "The Sludge" },
+                { id: "the_gulch", name: "The Gulch" },
+                { id: "firebase_hades", name: "Firebase Hades" },
+                { id: "sunken_isles", name: "Sunken Isles" }
+            ]
+        },
+        {
+            id: "cosmodrome",
+            name: "Cosmodrome",
+            areas: [
+                { id: "the_steppes", name: "The Steppes" },
+                { id: "mothyards", name: "Mothyards" },
+                { id: "skywatch", name: "Skywatch" },
+                { id: "forgotten_shore", name: "Forgotten Shore" }
+            ]
+        },
+        {
+            id: "tower",
+            name: "Tower",
+            areas: [
+                { id: "courtyard", name: "Courtyard" },
+                { id: "hangar", name: "Hangar" },
+                { id: "bazaar", name: "Bazaar" },
+                { id: "annex", name: "Annex" },
+            ]
+        },
+        {
+            id: "pale_heart",
+            name: "The Pale Heart",
+            areas: [
+                { id: "the_landing", name: "The Landing" },
+                { id: "the_blooming", name: "The Vault" },
+                { id: "the_impasse", name: "The Wellspring" }
             ]
         },
         {
@@ -25,7 +56,8 @@ const locations = {
                 { id: "hellmouth", name: "Hellmouth" },
                 { id: "anchor_of_light", name: "Anchor of Light" },
                 { id: "sorrows_harbor", name: "Sorrow's Harbor" },
-                { id: "shrine_of_oryx", name: "Shrine of Oryx" }
+                { id: "scarlet_keep", name: "Scarlet Keep" },
+                { id: "sanctuary", name: "Sanctuary" }
             ]
         },
         {
@@ -35,7 +67,6 @@ const locations = {
                 { id: "eventide_ruins", name: "Eventide Ruins" },
                 { id: "asterion_abyss", name: "Asterion Abyss" },
                 { id: "cadmus_ridge", name: "Cadmus Ridge" },
-                { id: "bray_exoscience", name: "Bray Exoscience" },
                 { id: "riis_reborn", name: "Riis-Reborn" }
             ]
         },
@@ -47,7 +78,9 @@ const locations = {
                 { id: "artifact_edge", name: "Artifact's Edge" },
                 { id: "watcher_grave", name: "Watcher's Grave" },
                 { id: "glade_of_echoes", name: "Glade of Echoes" },
-                { id: "cistern", name: "The Cistern" }
+                { id: "the_cistern", name: "The Cistern" },
+                { id: "the_tangle", name: "The Tangle" },
+                { id: "hallows", name: "Hallows" }
             ]
         },
         {
@@ -57,8 +90,7 @@ const locations = {
                 { id: "quagmire", name: "Quagmire" },
                 { id: "miasma", name: "Miasma" },
                 { id: "fluorescent_canal", name: "Fluorescent Canal" },
-                { id: "temple_of_the_cunning", name: "Temple of the Cunning" },
-                { id: "altar_of_reflection", name: "Altar of Reflection" }
+                { id: "enclave", name: "The Enclave" },
             ]
         },
         {
@@ -68,8 +100,7 @@ const locations = {
                 { id: "zephyr_concourse", name: "Zephyr Concourse" },
                 { id: "ahimsa_park", name: "Ahimsa Park" },
                 { id: "liming_harbor", name: "Liming Harbor" },
-                { id: "radiosidian_district", name: "Radiosidian District" },
-                { id: "strider_straits", name: "Strider's Straits" }
+                { id: "striders_gate", name: "Striders' Gate" }
             ]
         },
         {
@@ -80,7 +111,8 @@ const locations = {
                 { id: "rheasilvia", name: "Rheasilvia" },
                 { id: "spine_of_keres", name: "Spine of Keres" },
                 { id: "harbingers_seclude", name: "Harbinger's Seclude" },
-                { id: "the_confluence", name: "The Confluence" }
+                { id: "the_confluence", name: "The Confluence" },
+                { id: "gardens_of_esila", name: "Gardens of Esila" },
             ]
         }
     ],
@@ -90,26 +122,39 @@ const locations = {
     locationData: [
         {
             id: 1,
-            destination: "earth",
-            area: "edz",
-            imageUrl: "assets/locations/earth_edz_1.jpg",
+            destination: "throne_world",
+            area: "miasma",
+            imageUrl: "assets/locations/throne_world_miasma_1.png",
             difficulty: "easy"
         },
         {
             id: 2,
-            destination: "moon",
-            area: "hellmouth",
-            imageUrl: "assets/locations/moon_hellmouth_1.jpg",
+            destination: "europa",
+            area: "asterion_abyss",
+            imageUrl: "assets/locations/europa_asterion_abyss_1.png",
             difficulty: "medium"
         },
         {
             id: 3,
+            destination: "tower",
+            area: "hangar",
+            imageUrl: "assets/locations/tower_hangar_1.png",
+            difficulty: "hard"
+        },
+        {
+            id: 4,
             destination: "europa",
-            area: "asterion_abyss",
-            imageUrl: "assets/locations/europa_asterion_abyss_1.jpg",
+            area: "eventide_ruins",
+            imageUrl: "assets/locations/europa_eventide_ruins_1.png",
+            difficulty: "medium"
+        },
+        {
+            id: 5,
+            destination: "throne_world",
+            area: "enclave",
+            imageUrl: "assets/locations/throne_world_enclave_1.png",
             difficulty: "hard"
         }
-        // Additional location entries would be added here as screenshots are collected
     ]
 };
 
