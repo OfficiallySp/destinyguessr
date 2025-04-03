@@ -11,7 +11,7 @@ const shareResultsButton = document.getElementById('share-results');
 // Initialize the results page
 function initResultsPage() {
     // Get final score and results from localStorage
-    const finalScore = localStorage.getItem('destinyGuessr_finalScore') || 0;
+    const finalScore = localStorage.getItem('destinyGuessr_finalScore');
     const resultsJson = localStorage.getItem('destinyGuessr_results');
     const results = resultsJson ? JSON.parse(resultsJson) : [];
 
@@ -94,24 +94,10 @@ function shareResults() {
     const score = finalScoreElement.textContent;
     const rank = rankTitleElement.textContent;
 
-    const shareText = `I scored ${score} points in DestinyGuessr and earned the rank of "${rank}"! Can you beat my score? #DestinyGuessr`;
+    const shareText = `I just scored ${score} points in DestinyGuessr and earned the rank of "${rank}"! Can you beat my score? #DestinyGuessr`;
 
-    // Check if Web Share API is supported
-    if (navigator.share) {
-        navigator.share({
-            title: 'My DestinyGuessr Results',
-            text: shareText,
-            url: window.location.origin // URL to the game
-        })
-        .catch(error => {
-            console.error('Error sharing:', error);
-            // Fallback to clipboard copy
-            copyToClipboard(shareText);
-        });
-    } else {
-        // Fallback to clipboard copy
-        copyToClipboard(shareText);
-    }
+    // Use clipboard copy for sharing
+    copyToClipboard(shareText);
 }
 
 // Copy text to clipboard

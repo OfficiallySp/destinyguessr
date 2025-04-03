@@ -116,7 +116,7 @@ function updateUI() {
 
         // Fallback if image can't be loaded
         locationImage.onerror = function() {
-            locationImage.src = 'assets/location_placeholder.jpg';
+            locationImage.src = 'assets/location_placeholder.png';
         };
     }
 

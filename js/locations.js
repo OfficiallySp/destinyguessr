@@ -44,8 +44,8 @@ const locations = {
             name: "The Pale Heart",
             areas: [
                 { id: "the_landing", name: "The Landing" },
-                { id: "the_blooming", name: "The Vault" },
-                { id: "the_impasse", name: "The Wellspring" }
+                { id: "the_blooming", name: "The Blooming" },
+                { id: "the_impasse", name: "The Impasse" },
             ]
         },
         {
@@ -56,7 +56,6 @@ const locations = {
                 { id: "hellmouth", name: "Hellmouth" },
                 { id: "anchor_of_light", name: "Anchor of Light" },
                 { id: "sorrows_harbor", name: "Sorrow's Harbor" },
-                { id: "scarlet_keep", name: "Scarlet Keep" },
                 { id: "sanctuary", name: "Sanctuary" }
             ]
         },
@@ -67,7 +66,9 @@ const locations = {
                 { id: "eventide_ruins", name: "Eventide Ruins" },
                 { id: "asterion_abyss", name: "Asterion Abyss" },
                 { id: "cadmus_ridge", name: "Cadmus Ridge" },
-                { id: "riis_reborn", name: "Riis-Reborn" }
+                { id: "charons_crossing", name: "Charon's Crossing" },
+                { id: "beyond", name: "Beyond" },
+                { id: "riis_reborn", name: "Riis Reborn" },
             ]
         },
         {
@@ -114,6 +115,44 @@ const locations = {
                 { id: "the_confluence", name: "The Confluence" },
                 { id: "gardens_of_esila", name: "Gardens of Esila" },
             ]
+        },
+        {
+            id: "io",
+            name: "Io",
+            areas: [
+                { id: "lost_oasis", name: "Lost Oasis" },
+                { id: "giants_scar", name: "Giant's Scar" },
+                { id: "the_rupture", name: "The Rupture" },
+                { id: "pyramidion", name: "Pyramidion" },
+            ]
+        },
+        {
+            id: "mercury",
+            name: "Mercury",
+            areas: [
+                { id: "mercury", name: "Mercury" },
+                { id: "infinite_forest", name: "The Infinite Forest" },
+            ]
+        },
+        {
+            id: "titan",
+            name: "Titan",
+            areas: [
+                { id: "sirens_watch", name: "Siren's Watch" },
+                { id: "the_rig", name: "The Rig" },
+                { id: "solarium", name: "Solarium" },
+            ]
+        },
+        {
+            id: "tangled_shore",
+            name: "The Tangled Shore",
+            areas: [
+                { id: "jetsam_saturn", name: "Jetsam of Saturn" },
+                { id: "thieves_landing", name: "Thieves' Landing" },
+                { id: "fourhorn_gulch", name: "Four-horn Gulch" },
+                { id: "soriks_cut", name: "Soriks's Cut" },
+
+            ]
         }
     ],
 
@@ -122,38 +161,66 @@ const locations = {
     locationData: [
         {
             id: 1,
-            destination: "throne_world",
-            area: "miasma",
-            imageUrl: "assets/locations/throne_world_miasma_1.png",
+            destination: "europa",
+            area: "charons_crossing",
+            imageUrl: "assets/locations/europa_charons_crossing_1.png",
             difficulty: "easy"
         },
         {
             id: 2,
-            destination: "europa",
-            area: "asterion_abyss",
-            imageUrl: "assets/locations/europa_asterion_abyss_1.png",
-            difficulty: "medium"
+            destination: "cosmodrome",
+            area: "the_steppes",
+            imageUrl: "assets/locations/cosmodrome_the_steppes_1.png",
+            difficulty: "easy"
         },
         {
             id: 3,
-            destination: "tower",
-            area: "hangar",
-            imageUrl: "assets/locations/tower_hangar_1.png",
-            difficulty: "hard"
+            destination: "dreaming_city",
+            area: "divalian_mists",
+            imageUrl: "assets/locations/dreaming_city_divalian_mists_1.png",
+            difficulty: "easy"
         },
         {
             id: 4,
             destination: "europa",
-            area: "eventide_ruins",
-            imageUrl: "assets/locations/europa_eventide_ruins_1.png",
-            difficulty: "medium"
+            area: "riis_reborn",
+            imageUrl: "assets/locations/europa_riis_reborn_1.png",
+            difficulty: "easy"
         },
         {
             id: 5,
-            destination: "throne_world",
-            area: "enclave",
-            imageUrl: "assets/locations/throne_world_enclave_1.png",
+            destination: "io",
+            area: "lost_oasis",
+            imageUrl: "assets/locations/io_lost_oasis_1.png",
             difficulty: "hard"
+        },
+        {
+            id: 6,
+            destination: "dreaming_city",
+            area: "rheasilvia",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_1.png",
+            difficulty: "medium"
+        },
+        {
+            id: 7,
+            destination: "moon",
+            area: "sorrows_harbor",
+            imageUrl: "assets/locations/moon_sorrows_harbor_1.png",
+            difficulty: "easy"
+        },
+        {
+            id: 8,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_1.png",
+            difficulty: "hard"
+        },
+        {
+            id: 9,
+            destination: "moon",
+            area: "sorrows_harbor",
+            imageUrl: "assets/locations/moon_sorrows_harbor_2.png",
+            difficulty: "easy"
         }
     ]
 };
@@ -166,28 +233,53 @@ const guardianRanks = [
         description: "You're just getting started with Destiny 2 locations. Keep exploring!"
     },
     {
-        title: "Guardian",
-        minScore: 1000,
+        title: "Explorer",
+        minScore: 500,
         description: "You're familiar with some locations, but there's still much to learn."
     },
     {
-        title: "Veteran Guardian",
-        minScore: 2000,
+        title: "Initiate",
+        minScore: 1000,
         description: "You've spent considerable time exploring the solar system!"
     },
     {
-        title: "Vanguard Scout",
-        minScore: 3000,
+        title: "Scout",
+        minScore: 1500,
         description: "Your knowledge of Destiny 2 locations is impressive!"
     },
     {
-        title: "Destination Expert",
-        minScore: 4000,
+        title: "Adventurer",
+        minScore: 2000,
         description: "Few Guardians know the solar system's secrets as well as you do!"
     },
     {
-        title: "The Cartographer",
-        minScore: 4500,
+        title: "Veteran",
+        minScore: 2500,
         description: "Your knowledge of every corner of Destiny 2 is virtually unmatched!"
-    }
+    },
+    {
+        title: "Elite",
+        minScore: 3000,
+        description: "You've mastered the art of Destiny 2 locations!"
+    },
+    {
+        title: "Justiciar",
+        minScore: 3500,
+        description: "You've become a guardian of the solar system!"
+    },
+    {
+        title: "Vanquisher",
+        minScore: 4000,
+        description: ""
+    },
+    {
+        title: "Exemplar",
+        minScore: 4500,
+        description: ""
+    },
+    {
+        title: "Paragon",
+        minScore: 5000,
+        description: ""
+    },
 ];
