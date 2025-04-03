@@ -221,6 +221,13 @@ const locations = {
             area: "sorrows_harbor",
             imageUrl: "assets/locations/moon_sorrows_harbor_2.png",
             difficulty: "easy"
+        },
+        {
+            id: 10,
+            destination: "throne_world",
+            area: "fluorescent_canal",
+            imageUrl: "assets/locations/throne_world_fluorescent_canal_1.png",
+            difficulty: "easy"
         }
     ]
 };
@@ -270,16 +277,16 @@ const guardianRanks = [
     {
         title: "Vanquisher",
         minScore: 4000,
-        description: ""
+        description: "Your location knowledge would make Lord Shaxx proud! You vanquish all challenges!"
     },
     {
         title: "Exemplar",
         minScore: 4500,
-        description: ""
+        description: "You are an exemplar of location knowledge, a beacon for other Guardians to follow!"
     },
     {
         title: "Paragon",
         minScore: 5000,
-        description: ""
+        description: "The Vanguard should hire you as their cartographer! Your knowledge is legendary!"
     },
 ];
