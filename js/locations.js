@@ -290,8 +290,8 @@ const locations = {
         {
             id: 19,
             destination: "europa",
-            area: "the_glassway",
-            imageUrl: "assets/locations/europa_the_glassway_1.png",
+            area: "glassway",
+            imageUrl: "assets/locations/europa_glassway_1.png",
             difficulty: "medium"
         },
         {
@@ -317,6 +317,16 @@ const locations = {
         },
         {
             id: 23,
+            destination: "throne_world",
+            area: "miasma",
+            imageUrl: "assets/locations/throne_world_miasma_1.png",
+            difficulty: "easy"
+        },
+        {
+            id: 24,
+            destination: "titan",
+            area: "solarium",
+            imageUrl: "assets/locations/titan_solarium_1.png",
         }
     ]
 };
