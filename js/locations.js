@@ -69,6 +69,7 @@ const locations = {
                 { id: "charons_crossing", name: "Charon's Crossing" },
                 { id: "beyond", name: "Beyond" },
                 { id: "riis_reborn", name: "Riis Reborn" },
+                { id: "glassway", name: "The Glassway" },
             ]
         },
         {
@@ -110,10 +111,11 @@ const locations = {
             areas: [
                 { id: "divalian_mists", name: "Divalian Mists" },
                 { id: "rheasilvia", name: "Rheasilvia" },
+                { id: "the_strand", name: "The Strand" },
                 { id: "spine_of_keres", name: "Spine of Keres" },
                 { id: "harbingers_seclude", name: "Harbinger's Seclude" },
                 { id: "the_confluence", name: "The Confluence" },
-                { id: "gardens_of_esila", name: "Gardens of Esila" },
+                { id: "garden_esila", name: "Gardens of Esila" },
             ]
         },
         {
@@ -228,6 +230,93 @@ const locations = {
             area: "fluorescent_canal",
             imageUrl: "assets/locations/throne_world_fluorescent_canal_1.png",
             difficulty: "easy"
+        },
+        {
+            id: 11,
+            destination: "dreaming_city",
+            area: "garden_esila",
+            imageUrl: "assets/locations/dreaming_city_garden_esila_1.png",
+            difficulty: "easy"
+        },
+        {
+            id: 12,
+            destination: "dreaming_city",
+            area: "rheasilvia",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_2.png",
+            difficulty: "easy"
+        },
+        {
+            id: 13,
+            destination: "dreaming_city",
+            area: "divalian_mists",
+            imageUrl: "assets/locations/dreaming_city_divalian_mists_2.png",
+            difficulty: "easy"
+        },
+        {
+            id: 14,
+            destination: "tangled_shore",
+            area: "thieves_landing",
+            imageUrl: "assets/locations/tangled_shore_thieves_landing_1.png",
+            difficulty: "easy"
+        },
+        {
+            id: 15,
+            destination: "moon",
+            area: "anchor_of_light",
+            imageUrl: "assets/locations/moon_anchor_of_light_1.png",
+            difficulty: "easy"
+        },
+        {
+            id: 16,
+            destination: "nessus",
+            area: "artifact_edge",
+            imageUrl: "assets/locations/nessus_artifact_edge_1.png",
+            difficulty: "medium"
+        },
+        {
+            id: 17,
+            destination: "dreaming_city",
+            area: "the_strand",
+            imageUrl: "assets/locations/dreaming_city_the_strand_1.png",
+            difficulty: "medium"
+        },
+        {
+            id: 18,
+            destination: "moon",
+            area: "sorrows_harbor",
+            imageUrl: "assets/locations/moon_sorrows_harbor_3.png",
+            difficulty: "medium"
+        },
+        {
+            id: 19,
+            destination: "europa",
+            area: "the_glassway",
+            imageUrl: "assets/locations/europa_the_glassway_1.png",
+            difficulty: "medium"
+        },
+        {
+            id: 20,
+            destination: "nessus",
+            area: "artifact_edge",
+            imageUrl: "assets/locations/nessus_artifact_edge_2.png",
+            difficulty: "medium"
+        },
+        {
+            id: 21,
+            destination: "europa",
+            area: "glassway",
+            imageUrl: "assets/locations/europa_glassway_2.png",
+            difficulty: "easy"
+        },
+        {
+            id: 22,
+            destination: "tangled_shore",
+            area: "jetsam_saturn",
+            imageUrl: "assets/locations/tangled_shore_jetsam_saturn_1.png",
+            difficulty: "hard"
+        },
+        {
+            id: 23,
         }
     ]
 };
