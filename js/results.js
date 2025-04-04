@@ -60,11 +60,11 @@ function displayRoundResults(results) {
         let statusClass = '';
         let statusText = '';
 
-        if (result.correctDestination === result.guessedDestination &&
-            result.correctArea === result.guessedArea) {
+        if (result.actual.destination === result.guess.destination &&
+            result.actual.area === result.guess.area) {
             statusClass = 'correct';
             statusText = 'Perfect match!';
-        } else if (result.correctDestination === result.guessedDestination) {
+        } else if (result.actual.destination === result.guess.destination) {
             statusClass = 'correct';
             statusText = 'Correct destination';
         } else {
@@ -77,7 +77,7 @@ function displayRoundResults(results) {
                 <span class="round-number">Round ${index + 1}</span>
                 <span class="status ${statusClass}">${statusText}</span>
             </div>
-            <div class="round-score">+${result.score} points</div>
+            <div class="round-score">+${result.points} points</div>
         `;
 
         roundsContainer.appendChild(roundElement);

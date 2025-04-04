@@ -11,7 +11,9 @@ let gameState = {
         area: null
     },
     results: [],
-    isRoundComplete: false
+    isRoundComplete: false,
+    timer: null,
+    timeRemaining: 15
 };
 
 // DOM Elements
@@ -25,30 +27,26 @@ const step2Container = document.getElementById('step-2');
 const submitGuessButton = document.getElementById('submit-guess');
 const nextRoundButton = document.getElementById('next-round');
 const resultFeedback = document.getElementById('result-feedback');
+const locationIdElement = document.getElementById('location-id');
+const difficultyBadgeElement = document.getElementById('difficulty-badge');
 
-// Check if we should resume a game
-const urlParams = new URLSearchParams(window.location.search);
-const resumeGame = urlParams.get('resume') === 'true';
+// Create timer element
+const gameStatsDiv = document.querySelector('.game-stats');
+const timerElement = document.createElement('div');
+timerElement.className = 'timer';
+timerElement.innerHTML = 'Time: <span id="time-remaining">15</span>s';
+gameStatsDiv.appendChild(timerElement);
+const timeRemainingElement = document.getElementById('time-remaining');
 
 // Initialize the game
 function initGame() {
-    // Check if there's a saved game to resume
-    if (resumeGame) {
-        const savedGame = localStorage.getItem('destinyGuessr_gameState');
-        if (savedGame) {
-            gameState = JSON.parse(savedGame);
-            updateUI();
-
-            if (gameState.isRoundComplete) {
-                showRoundResult();
-            }
-            return;
-        }
+    try {
+        // Start a new game
+        resetGame();
+        startNewRound();
+    } catch (error) {
+        console.error('Error initializing game:', error);
     }
-
-    // Start a new game
-    resetGame();
-    startNewRound();
 }
 
 // Reset the game to initial state
@@ -63,11 +61,10 @@ function resetGame() {
             area: null
         },
         results: [],
-        isRoundComplete: false
+        isRoundComplete: false,
+        timer: null,
+        timeRemaining: 15
     };
-
-    // Set flag that a game is in progress
-    localStorage.setItem('destinyGuessr_gameInProgress', 'true');
 }
 
 // Start a new round
@@ -76,6 +73,10 @@ function startNewRound() {
     gameState.guess.destination = null;
     gameState.guess.area = null;
     gameState.isRoundComplete = false;
+    gameState.timeRemaining = 15;
+
+    // Show image info
+    document.querySelector('.image-info').classList.remove('hidden');
 
     // Get a random location that hasn't been used yet
     gameState.currentLocation = getRandomLocation();
@@ -83,8 +84,112 @@ function startNewRound() {
     // Update UI
     updateUI();
 
-    // Save game state
-    saveGameState();
+    // Start the timer
+    startTimer();
+}
+
+// Start the timer
+function startTimer() {
+    // Clear any existing timer
+    if (gameState.timer) {
+        clearInterval(gameState.timer);
+        gameState.timer = null;
+    }
+
+    // Reset time remaining
+    gameState.timeRemaining = 15;
+    timeRemainingElement.textContent = gameState.timeRemaining;
+
+    // Reset timer visual state
+    timerElement.setAttribute('data-time', 'normal');
+
+    // Start a new timer
+    gameState.timer = setInterval(function() {
+        try {
+            // Decrease time remaining
+            gameState.timeRemaining--;
+
+            // Update timer display
+            timeRemainingElement.textContent = gameState.timeRemaining;
+
+            // Update timer visual state based on time remaining
+            if (gameState.timeRemaining <= 5) {
+                timerElement.setAttribute('data-time', 'danger');
+            } else if (gameState.timeRemaining <= 10) {
+                timerElement.setAttribute('data-time', 'warning');
+            } else {
+                timerElement.setAttribute('data-time', 'normal');
+            }
+
+            // If time is up, auto-submit with current selection (or no selection)
+            if (gameState.timeRemaining <= 0) {
+                clearInterval(gameState.timer);
+                gameState.timer = null;
+
+                // If round is not complete, force timeout
+                if (!gameState.isRoundComplete) {
+                    timeOut();
+                }
+            }
+
+            // Save game state
+            saveGameState();
+        } catch (error) {
+            console.error('Error in timer function:', error);
+            clearInterval(gameState.timer);
+            gameState.timer = null;
+        }
+    }, 1000);
+}
+
+// Handle timeout (time is up)
+function timeOut() {
+    // Create a timeout result
+    gameState.results.push({
+        locationId: gameState.currentLocation.id,
+        actual: {
+            destination: gameState.currentLocation.destination,
+            area: gameState.currentLocation.area
+        },
+        guess: {
+            destination: gameState.guess.destination || null,
+            area: gameState.guess.area || null
+        },
+        points: 0,
+        isCorrect: false,
+        timedOut: true
+    });
+
+    // Mark round as complete
+    gameState.isRoundComplete = true;
+
+    // Show timeout result
+    showTimeoutResult();
+}
+
+// Show timeout result
+function showTimeoutResult() {
+    // Hide image info during result display
+    document.querySelector('.image-info').classList.add('hidden');
+
+    // Get actual destination and area names
+    const actualDestination = getDestinationName(gameState.currentLocation.destination);
+    const actualArea = getAreaName(gameState.currentLocation.destination, gameState.currentLocation.area);
+
+    // Create timeout feedback HTML
+    const feedbackHtml = `
+        <h3 class="incorrect">Time's Up!</h3>
+        <p>You ran out of time to make a guess.</p>
+        <p>Actual location: ${actualDestination} - ${actualArea}</p>
+        <p>You've earned 0 points for this round.</p>
+    `;
+
+    // Display feedback
+    resultFeedback.innerHTML = feedbackHtml;
+    resultFeedback.classList.remove('hidden');
+
+    // Update button states
+    updateButtonStates();
 }
 
 // Get a random location that hasn't been used yet
@@ -113,6 +218,14 @@ function updateUI() {
     // Set location image
     if (gameState.currentLocation) {
         locationImage.src = gameState.currentLocation.imageUrl;
+
+        // Update location ID and difficulty
+        locationIdElement.textContent = gameState.currentLocation.id;
+        difficultyBadgeElement.textContent = gameState.currentLocation.difficulty;
+
+        // Set appropriate class for difficulty
+        difficultyBadgeElement.className = 'image-difficulty';
+        difficultyBadgeElement.classList.add('difficulty-' + gameState.currentLocation.difficulty);
 
         // Fallback if image can't be loaded
         locationImage.onerror = function() {
@@ -241,13 +354,18 @@ function updateButtonStates() {
 
 // Submit guess
 function submitGuess() {
+    // Clear the timer
+    if (gameState.timer) {
+        clearInterval(gameState.timer);
+    }
+
     if (!gameState.guess.destination || !gameState.guess.area) {
         return;
     }
 
     // Calculate score for this round
     let roundScore = 0;
-    let feedback = '';
+    let isCorrect = false;
 
     const correctDestination = gameState.currentLocation.destination;
     const correctArea = gameState.currentLocation.area;
@@ -257,20 +375,15 @@ function submitGuess() {
     if (guessedDestination === correctDestination && guessedArea === correctArea) {
         // Perfect match
         roundScore = 1000;
-        feedback = `<h3 class="correct">Perfect match! +${roundScore} points</h3>`;
-        feedback += `<p>You correctly identified this location as ${getDestinationName(correctDestination)}, ${getAreaName(correctDestination, correctArea)}.</p>`;
+        isCorrect = true;
     } else if (guessedDestination === correctDestination) {
         // Correct destination, wrong area
         roundScore = 500;
-        feedback = `<h3 class="correct">Correct destination! +${roundScore} points</h3>`;
-        feedback += `<p>You correctly identified this location as ${getDestinationName(correctDestination)}.</p>`;
-        feedback += `<p>The specific area is ${getAreaName(correctDestination, correctArea)}.</p>`;
+        isCorrect = false;
     } else {
         // Wrong destination
         roundScore = 0;
-        feedback = `<h3 class="incorrect">Incorrect! +${roundScore} points</h3>`;
-        feedback += `<p>This location is ${getDestinationName(correctDestination)}, ${getAreaName(correctDestination, correctArea)}.</p>`;
-        feedback += `<p>You guessed ${getDestinationName(guessedDestination)}, ${getAreaName(guessedDestination, guessedArea)}.</p>`;
+        isCorrect = false;
     }
 
     // Update score
@@ -279,11 +392,16 @@ function submitGuess() {
     // Save result
     gameState.results.push({
         locationId: gameState.currentLocation.id,
-        correctDestination,
-        correctArea,
-        guessedDestination,
-        guessedArea,
-        score: roundScore
+        actual: {
+            destination: correctDestination,
+            area: correctArea
+        },
+        guess: {
+            destination: guessedDestination,
+            area: guessedArea
+        },
+        points: roundScore,
+        isCorrect: isCorrect
     });
 
     // Mark round as complete
@@ -291,11 +409,9 @@ function submitGuess() {
 
     // Update UI
     currentScoreElement.textContent = gameState.score;
-    updateButtonStates();
 
-    // Show result feedback
-    resultFeedback.innerHTML = feedback;
-    resultFeedback.classList.remove('hidden');
+    // Show round result
+    showRoundResult();
 
     // Save game state
     saveGameState();
@@ -344,32 +460,60 @@ function getAreaName(destinationId, areaId) {
     return area ? area.name : 'Unknown Area';
 }
 
-// Show round result
+// Show the result of the round
 function showRoundResult() {
     if (!gameState.isRoundComplete) return;
 
-    const lastResult = gameState.results[gameState.results.length - 1];
-
-    let feedback = '';
-    if (lastResult.correctDestination === lastResult.guessedDestination &&
-        lastResult.correctArea === lastResult.guessedArea) {
-        // Perfect match
-        feedback = `<h3 class="correct">Perfect match! +${lastResult.score} points</h3>`;
-        feedback += `<p>You correctly identified this location as ${getDestinationName(lastResult.correctDestination)}, ${getAreaName(lastResult.correctDestination, lastResult.correctArea)}.</p>`;
-    } else if (lastResult.correctDestination === lastResult.guessedDestination) {
-        // Correct destination, wrong area
-        feedback = `<h3 class="correct">Correct destination! +${lastResult.score} points</h3>`;
-        feedback += `<p>You correctly identified this location as ${getDestinationName(lastResult.correctDestination)}.</p>`;
-        feedback += `<p>The specific area is ${getAreaName(lastResult.correctDestination, lastResult.correctArea)}.</p>`;
-    } else {
-        // Wrong destination
-        feedback = `<h3 class="incorrect">Incorrect! +${lastResult.score} points</h3>`;
-        feedback += `<p>This location is ${getDestinationName(lastResult.correctDestination)}, ${getAreaName(lastResult.correctDestination, lastResult.correctArea)}.</p>`;
-        feedback += `<p>You guessed ${getDestinationName(lastResult.guessedDestination)}, ${getAreaName(lastResult.guessedDestination, lastResult.guessedArea)}.</p>`;
+    // Clear timer if active
+    if (gameState.timer) {
+        clearInterval(gameState.timer);
+        gameState.timer = null;
     }
 
-    // Show result feedback
-    resultFeedback.innerHTML = feedback;
+    const lastResult = gameState.results[gameState.results.length - 1];
+
+    // Hide image info during result display
+    document.querySelector('.image-info').classList.add('hidden');
+
+    // If this was a timeout, show the timeout result instead
+    if (lastResult.timedOut) {
+        showTimeoutResult();
+        return;
+    }
+
+    // Get destination and area names
+    const guessedDestination = getDestinationName(lastResult.guess.destination);
+    const guessedArea = getAreaName(lastResult.guess.destination, lastResult.guess.area);
+    const actualDestination = getDestinationName(lastResult.actual.destination);
+    const actualArea = getAreaName(lastResult.actual.destination, lastResult.actual.area);
+
+    // Create feedback HTML
+    let feedbackHtml = '';
+    if (lastResult.isCorrect) {
+        feedbackHtml = `
+            <h3 class="correct">Correct!</h3>
+            <p>You've earned ${lastResult.points} points.</p>
+            <p>This is indeed ${actualDestination} - ${actualArea}.</p>
+        `;
+    } else if (lastResult.guess.destination === lastResult.actual.destination) {
+        feedbackHtml = `
+            <h3 class="correct">Correct Destination!</h3>
+            <p>You identified the correct destination, but wrong area.</p>
+            <p>You guessed: ${guessedDestination} - ${guessedArea}</p>
+            <p>Actual location: ${actualDestination} - ${actualArea}</p>
+            <p>You've earned ${lastResult.points} points.</p>
+        `;
+    } else {
+        feedbackHtml = `
+            <h3 class="incorrect">Not Quite!</h3>
+            <p>You guessed: ${guessedDestination} - ${guessedArea}</p>
+            <p>Actual location: ${actualDestination} - ${actualArea}</p>
+            <p>You've earned ${lastResult.points} points.</p>
+        `;
+    }
+
+    // Display feedback
+    resultFeedback.innerHTML = feedbackHtml;
     resultFeedback.classList.remove('hidden');
 
     // Update button states
@@ -378,7 +522,21 @@ function showRoundResult() {
 
 // Save game state to localStorage
 function saveGameState() {
-    localStorage.setItem('destinyGuessr_gameState', JSON.stringify(gameState));
+    try {
+        // Prepare a sanitized version of gameState for storage
+        const stateToSave = { ...gameState };
+
+        // Don't save the timer reference as it can't be serialized properly
+        if (stateToSave.timer) {
+            delete stateToSave.timer;
+        }
+
+        // Save to localStorage
+        localStorage.setItem('destinyGuessr_gameState', JSON.stringify(stateToSave));
+    } catch (error) {
+        console.error('Error saving game state:', error);
+        // Don't throw the error further to prevent page crashes
+    }
 }
 
 // Event Listeners
