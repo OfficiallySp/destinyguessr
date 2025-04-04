@@ -645,8 +645,8 @@ const locations = {
         {
             id: 70,
             destination: "neomuna",
-            area: "the_wellspring",
-            imageUrl: "assets/locations/neomuna_the_wellspring_1.webp",
+            area: "striders_gate",
+            imageUrl: "assets/locations/neomuna_striders_gate_1.webp",
             difficulty: "medium"
         },
         {
