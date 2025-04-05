@@ -599,65 +599,57 @@ const locations = {
             area: "eventide_ruins",
             imageUrl: "assets/locations/europa_eventide_ruins_1.webp",
             difficulty: "medium"
-        },
-        {
+        },        {
             id: 64,
-            destination: "europa",
-            area: "eventide_ruins",
-            imageUrl: "assets/locations/europa_eventide_ruins_2.webp",
-            difficulty: "medium"
-        },
-        {
-            id: 65,
             destination: "dreaming_city",
             area: "rheasilvia",
             imageUrl: "assets/locations/dreaming_city_rheasilvia_4.webp",
             difficulty: "medium"
         },
         {
-            id: 66,
+            id: 65,
             destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_1.webp",
             difficulty: "easy"
         },
         {
-            id: 67,
+            id: 66,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_1.webp",
             difficulty: "medium"
         },
         {
-            id: 68,
+            id: 67,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_2.webp",
             difficulty: "easy"
         },
         {
-            id: 69,
+            id: 68,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_3.webp",
             difficulty: "medium"
         },
         {
-            id: 70,
+            id: 69,
             destination: "neomuna",
             area: "striders_gate",
             imageUrl: "assets/locations/neomuna_striders_gate_1.webp",
             difficulty: "medium"
         },
         {
-            id: 71,
+            id: 70,
             destination: "neomuna",
             area: "zephyr_concourse",
             imageUrl: "assets/locations/neomuna_zephyr_concourse_1.webp",
             difficulty: "hard"
         },
         {
-            id: 72,
+            id: 71,
             destination: "neomuna",
             area: "zephyr_concourse",
             imageUrl: "assets/locations/neomuna_zephyr_concourse_2.webp",

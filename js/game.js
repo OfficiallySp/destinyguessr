@@ -63,7 +63,7 @@ function resetGame() {
         results: [],
         isRoundComplete: false,
         timer: null,
-        timeRemaining: 15
+        timeRemaining: 20
     };
 }
 
@@ -73,7 +73,7 @@ function startNewRound() {
     gameState.guess.destination = null;
     gameState.guess.area = null;
     gameState.isRoundComplete = false;
-    gameState.timeRemaining = 15;
+    gameState.timeRemaining = 20;
 
     // Show image info
     document.querySelector('.image-info').classList.remove('hidden');
@@ -97,7 +97,7 @@ function startTimer() {
     }
 
     // Reset time remaining
-    gameState.timeRemaining = 15;
+    gameState.timeRemaining = 20;
     timeRemainingElement.textContent = gameState.timeRemaining;
 
     // Reset timer visual state
