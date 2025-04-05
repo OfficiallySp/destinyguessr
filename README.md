@@ -33,6 +33,7 @@ A Destiny 2-themed location guessing game inspired by GeoGuessr. Test your knowl
 ## Adding Your Own Screenshots
 
 1. Take screenshots while playing Destiny 2
+(I recommend using your platform specific screenshot feature, rather than a printscreen, on steam you can press F12, while on console you can save a screenshot that way)
 2. Name them according to the convention mentioned above
 3. Place them in the appropriate folders
 4. Update the `locationData` array in `js/locations.js` with entries for each screenshot
