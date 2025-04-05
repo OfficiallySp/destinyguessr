@@ -23,9 +23,9 @@ A Destiny 2-themed location guessing game inspired by GeoGuessr. Test your knowl
 2. Create an `assets/locations` directory structure to store your Destiny 2 screenshots
 3. Add your Destiny 2 screenshots to the appropriate folders following this naming convention:
    ```
-   assets/locations/[destination]_[area]_[number].png
+   assets/locations/[destination]_[area]_[number].avif
    ```
-   For example: `assets/locations/dreaming_city_divalian_mists_1.png`
+   For example: `assets/locations/dreaming_city_divalian_mists_1.avif`
 
 4. Update the `locationData` array in `js/locations.js` with entries for your screenshots
 
@@ -43,7 +43,7 @@ Example entry:
     id: 4,
     destination: "nessus",
     area: "exodus_black",
-    imageUrl: "assets/locations/nessus_exodus_black_1.png",
+    imageUrl: "assets/locations/nessus_exodus_black_1.avif",
     difficulty: "medium"
 }
 ```
