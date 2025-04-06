@@ -17,6 +17,7 @@ const locations = {
                 { id: "the_gulch", name: "The Gulch" },
                 { id: "firebase_hades", name: "Firebase Hades" },
                 { id: "sunken_isles", name: "Sunken Isles" },
+                { id: "niobe_labs", name: "Niobe Labs" },
                 { id: "windswept_crag", name: "Windswept Crag" },
             ]
         },
@@ -696,24 +697,31 @@ const locations = {
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_1.webp",
-            difficulty: "hard"
+            difficulty: "easy"
         },
         {
             id: 73,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_2.webp",
-            difficulty: "medium"
+            difficulty: "hard"
         },
         {
             id: 74,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_2.webp",
+            difficulty: "medium"
+        },
+        {
+            id: 75,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_3.webp",
             difficulty: "easy"
         },
         {
-            id: 75,
+            id: 76,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_4.webp",
