@@ -35,7 +35,8 @@
                     </ul>
                 </div>
 
-                <form name="locationSubmission" enctype="multipart/form-data" data-netlify="true" class="submission-form">
+                <form name="locationSubmission" method="POST" enctype="multipart/form-data" data-netlify="true" class="submission-form">
+                    <input type="hidden" name="form-name" value="locationSubmission" />
                     <p>
                         <label>
                             <span>Your username (for credit):</span>
@@ -66,8 +67,10 @@
                     </p>
                     <p>
                         <label>
-                            <span>Screenshot File:</span>
+                            <span>Screenshot File (8MB max):</span>
                             <input name="screenshot" type="file" accept="image/png,image/jpeg,image/avif" required />
+                            <span>You can use a service like <a href="https://tinypng.com/">TinyPNG</a> to compress the file size</span>
+
                         </label>
                     </p>
                     <p>

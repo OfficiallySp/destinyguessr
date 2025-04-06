@@ -10,14 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             resultElement.textContent = 'Submitting your screenshot...';
             resultElement.style.color = 'var(--primary-color)';
 
-            // Netlify handles the form submission natively
-            // This just enhances the UX with some feedback
+            // Use FormData directly for file uploads - don't convert to URLSearchParams
             const formData = new FormData(form);
 
             fetch('/', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
+                body: formData
             })
             .then(() => {
                 // Success message
