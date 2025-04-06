@@ -344,14 +344,6 @@ const locations = {
         },
         {
             id: 19,
-            destination: "moon",
-            area: "scarlet_keep",
-            imageUrl: "assets/locations/moon_scarlet_keep_5.webp",
-            difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
-        },
-        {
-            id: 20,
             destination: "europa",
             area: "glassway",
             imageUrl: "assets/locations/europa_glassway_1.webp",
@@ -359,7 +351,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 21,
+            id: 20,
             destination: "nessus",
             area: "artifact_edge",
             imageUrl: "assets/locations/nessus_artifact_edge_2.webp",
@@ -367,7 +359,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 22,
+            id: 21,
             destination: "europa",
             area: "glassway",
             imageUrl: "assets/locations/europa_glassway_2.webp",
@@ -375,7 +367,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 23,
+            id: 22,
             destination: "tangled_shore",
             area: "soriks_cut",
             imageUrl: "assets/locations/tangled_shore_soriks_cut_3.webp",
@@ -383,7 +375,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 24,
+            id: 23,
             destination: "throne_world",
             area: "miasma",
             imageUrl: "assets/locations/throne_world_miasma_1.webp",
@@ -391,7 +383,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 25,
+            id: 24,
             destination: "dreaming_city",
             area: "spine_of_keres",
             imageUrl: "assets/locations/dreaming_city_spine_of_keres_4.webp",
@@ -399,7 +391,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 26,
+            id: 25,
             destination: "dreaming_city",
             area: "harbingers_seclude",
             imageUrl: "assets/locations/dreaming_city_harbingers_seclude_2.webp",
@@ -407,7 +399,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 27,
+            id: 26,
             destination: "dreaming_city",
             area: "spine_of_keres",
             imageUrl: "assets/locations/dreaming_city_spine_of_keres_1.webp",
@@ -415,7 +407,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 28,
+            id: 27,
             destination: "dreaming_city",
             area: "spine_of_keres",
             imageUrl: "assets/locations/dreaming_city_spine_of_keres_2.webp",
@@ -423,7 +415,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 29,
+            id: 28,
             destination: "tangled_shore",
             area: "soriks_cut",
             imageUrl: "assets/locations/tangled_shore_soriks_cut_1.webp",
@@ -431,7 +423,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 30,
+            id: 29,
             destination: "throne_world",
             area: "fluorescent_canal",
             imageUrl: "assets/locations/throne_world_fluorescent_canal_2.webp",
@@ -439,7 +431,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 31,
+            id: 30,
             destination: "tangled_shore",
             area: "soriks_cut",
             imageUrl: "assets/locations/tangled_shore_soriks_cut_2.webp",
@@ -447,7 +439,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 32,
+            id: 31,
             destination: "tangled_shore",
             area: "jetsam_saturn",
             imageUrl: "assets/locations/tangled_shore_jetsam_saturn_2.webp",
@@ -455,7 +447,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 33,
+            id: 32,
             destination: "moon",
             area: "archers_line",
             imageUrl: "assets/locations/moon_archers_line_1.webp",
@@ -463,7 +455,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 34,
+            id: 33,
             destination: "moon",
             area: "archers_line",
             imageUrl: "assets/locations/moon_archers_line_2.webp",
@@ -471,7 +463,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 35,
+            id: 34,
             destination: "europa",
             area: "asterion_abyss",
             imageUrl: "assets/locations/europa_asterion_abyss_1.webp",
@@ -479,7 +471,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 36,
+            id: 35,
             destination: "europa",
             area: "asterion_abyss",
             imageUrl: "assets/locations/europa_asterion_abyss_2.webp",
@@ -487,7 +479,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 37,
+            id: 36,
             destination: "europa",
             area: "glassway",
             imageUrl: "assets/locations/europa_glassway_3.webp",
@@ -495,7 +487,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 38,
+            id: 37,
             destination: "europa",
             area: "asterion_abyss",
             imageUrl: "assets/locations/europa_asterion_abyss_3.webp",
@@ -503,7 +495,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 39,
+            id: 38,
             destination: "throne_world",
             area: "quagmire",
             imageUrl: "assets/locations/throne_world_quagmire_1.webp",
@@ -511,7 +503,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 40,
+            id: 39,
             destination: "throne_world",
             area: "miasma",
             imageUrl: "assets/locations/throne_world_miasma_2.webp",
@@ -519,7 +511,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 41,
+            id: 40,
             destination: "throne_world",
             area: "fluorescent_canal",
             imageUrl: "assets/locations/throne_world_fluorescent_canal_3.webp",
@@ -527,7 +519,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 42,
+            id: 41,
             destination: "throne_world",
             area: "fluorescent_canal",
             imageUrl: "assets/locations/throne_world_fluorescent_canal_4.webp",
@@ -535,7 +527,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 43,
+            id: 42,
             destination: "throne_world",
             area: "fluorescent_canal",
             imageUrl: "assets/locations/throne_world_fluorescent_canal_5.webp",
@@ -543,7 +535,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 44,
+            id: 43,
             destination: "throne_world",
             area: "quagmire",
             imageUrl: "assets/locations/throne_world_quagmire_2.webp",
@@ -551,7 +543,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 45,
+            id: 44,
             destination: "throne_world",
             area: "quagmire",
             imageUrl: "assets/locations/throne_world_quagmire_3.webp",
@@ -559,7 +551,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 46,
+            id: 45,
             destination: "dreaming_city",
             area: "the_strand",
             imageUrl: "assets/locations/dreaming_city_the_strand_2.webp",
@@ -567,7 +559,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 47,
+            id: 46,
             destination: "dreaming_city",
             area: "the_strand",
             imageUrl: "assets/locations/dreaming_city_the_strand_3.webp",
@@ -575,7 +567,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 48,
+            id: 47,
             destination: "dreaming_city",
             area: "the_strand",
             imageUrl: "assets/locations/dreaming_city_the_strand_4.webp",
@@ -583,7 +575,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 49,
+            id: 48,
             destination: "dreaming_city",
             area: "divalian_mists",
             imageUrl: "assets/locations/dreaming_city_divalian_mists_4.webp",
@@ -591,7 +583,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 50,
+            id: 49,
             destination: "dreaming_city",
             area: "divalian_mists",
             imageUrl: "assets/locations/dreaming_city_divalian_mists_5.webp",
@@ -599,7 +591,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 51,
+            id: 50,
             destination: "dreaming_city",
             area: "rheasilvia",
             imageUrl: "assets/locations/dreaming_city_rheasilvia_3.webp",
@@ -607,7 +599,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 52,
+            id: 51,
             destination: "dreaming_city",
             area: "divalian_mists",
             imageUrl: "assets/locations/dreaming_city_divalian_mists_6.webp",
@@ -615,7 +607,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 53,
+            id: 52,
             destination: "tangled_shore",
             area: "thieves_landing",
             imageUrl: "assets/locations/tangled_shore_thieves_landing_2.webp",
@@ -623,7 +615,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 54,
+            id: 53,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_1.webp",
@@ -631,7 +623,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 55,
+            id: 54,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_2.webp",
@@ -639,7 +631,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 56,
+            id: 55,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_3.webp",
@@ -647,7 +639,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 57,
+            id: 56,
             destination: "edz",
             area: "the_sludge",
             imageUrl: "assets/locations/edz_the_sludge_1.webp",
@@ -655,7 +647,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 58,
+            id: 57,
             destination: "edz",
             area: "the_sludge",
             imageUrl: "assets/locations/edz_the_sludge_2.webp",
@@ -663,7 +655,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 59,
+            id: 58,
             destination: "edz",
             area: "the_sludge",
             imageUrl: "assets/locations/edz_the_sludge_3.webp",
@@ -671,7 +663,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 60,
+            id: 59,
             destination: "edz",
             area: "the_sludge",
             imageUrl: "assets/locations/edz_the_sludge_4.webp",
@@ -679,7 +671,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 61,
+            id: 60,
             destination: "edz",
             area: "the_gulch",
             imageUrl: "assets/locations/edz_the_gulch_1.webp",
@@ -687,7 +679,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 62,
+            id: 61,
             destination: "dreaming_city",
             area: "spine_of_keres",
             imageUrl: "assets/locations/dreaming_city_spine_of_keres_3.webp",
@@ -695,14 +687,14 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 63,
+            id: 62,
             destination: "europa",
             area: "eventide_ruins",
             imageUrl: "assets/locations/europa_eventide_ruins_1.webp",
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },        {
-            id: 64,
+            id: 63,
             destination: "dreaming_city",
             area: "rheasilvia",
             imageUrl: "assets/locations/dreaming_city_rheasilvia_4.webp",
@@ -710,7 +702,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 65,
+            id: 64,
             destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_1.webp",
@@ -718,7 +710,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 66,
+            id: 65,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_1.webp",
@@ -726,7 +718,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 67,
+            id: 66,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_2.webp",
@@ -734,7 +726,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 68,
+            id: 67,
             destination: "mercury",
             area: "infinite_forest",
             imageUrl: "assets/locations/mercury_infinite_forest_3.webp",
@@ -742,7 +734,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 69,
+            id: 68,
             destination: "neomuna",
             area: "striders_gate",
             imageUrl: "assets/locations/neomuna_striders_gate_1.webp",
@@ -750,7 +742,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 70,
+            id: 69,
             destination: "neomuna",
             area: "irkalla_complex",
             imageUrl: "assets/locations/neomuna_irkalla_complex_1.webp",
@@ -758,7 +750,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 71,
+            id: 70,
             destination: "neomuna",
             area: "zephyr_concourse",
             imageUrl: "assets/locations/neomuna_zephyr_concourse_2.webp",
@@ -766,7 +758,7 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 72,
+            id: 71,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_1.webp",
@@ -774,31 +766,23 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 73,
+            id: 72,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_2.webp",
-            difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
-        },
-        {
-            id: 74,
-            destination: "moon",
-            area: "scarlet_keep",
-            imageUrl: "assets/locations/moon_scarlet_keep_2.webp",
-            difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
-        },
-        {
-            id: 75,
-            destination: "moon",
-            area: "scarlet_keep",
-            imageUrl: "assets/locations/moon_scarlet_keep_3.webp",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 76,
+            id: 73,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_3.webp",
+            difficulty: "medium",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 74,
             destination: "moon",
             area: "scarlet_keep",
             imageUrl: "assets/locations/moon_scarlet_keep_4.webp",
@@ -806,7 +790,15 @@ const locations = {
             submittedBy: "@shotsofdestiny"
         },
         {
-            id: 77,
+            id: 75,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_5.webp",
+            difficulty: "medium",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 76,
             destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_2.webp",
@@ -814,7 +806,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 78,
+            id: 77,
             destination: "moon",
             area: "anchor_of_light",
             imageUrl: "assets/locations/moon_anchor_of_light_2.webp",
@@ -822,7 +814,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 79,
+            id: 78,
             destination: "mars",
             area: "braytech_futurescape",
             imageUrl: "assets/locations/mars_braytech_futurescape_1.webp",
@@ -830,7 +822,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 80,
+            id: 79,
             destination: "mars",
             area: "glacial_drift",
             imageUrl: "assets/locations/mars_glacial_drift_1.webp",
@@ -838,7 +830,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 81,
+            id: 80,
             destination: "mercury",
             area: "mercury",
             imageUrl: "assets/locations/mercury_mercury_1.webp",
@@ -846,7 +838,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 82,
+            id: 81,
             destination: "titan",
             area: "sirens_watch",
             imageUrl: "assets/locations/titan_sirens_watch_1.webp",
@@ -854,7 +846,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 83,
+            id: 82,
             destination: "titan",
             area: "the_rig",
             imageUrl: "assets/locations/titan_the_rig_1.webp",
@@ -862,7 +854,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 84,
+            id: 83,
             destination: "io",
             area: "the_rupture",
             imageUrl: "assets/locations/io_the_rupture_1.webp",
@@ -870,7 +862,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 85,
+            id: 84,
             destination: "edz",
             area: "trostland",
             imageUrl: "assets/locations/edz_trostland_1.webp",
@@ -878,7 +870,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 86,
+            id: 85,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_1.webp",
@@ -886,7 +878,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 87,
+            id: 86,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_2.webp",
@@ -894,7 +886,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 88,
+            id: 87,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_3.webp",
@@ -902,7 +894,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 89,
+            id: 88,
             destination: "nessus",
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_1.webp",
@@ -910,7 +902,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 90,
+            id: 89,
             destination: "nessus",
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_2.webp",
@@ -918,7 +910,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 91,
+            id: 90,
             destination: "nessus",
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_3.webp",
@@ -926,7 +918,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 92,
+            id: 91,
             destination: "nessus",
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_4.webp",
@@ -934,7 +926,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 93,
+            id: 92,
             destination: "nessus",
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_5.webp",
@@ -942,7 +934,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 94,
+            id: 93,
             destination: "nessus",
             area: "artifact_edge",
             imageUrl: "assets/locations/nessus_artifact_edge_3.webp",
@@ -950,7 +942,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 95,
+            id: 94,
             destination: "edz",
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_1.webp",
@@ -958,7 +950,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 96,
+            id: 95,
             destination: "edz",
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_2.webp",
@@ -966,7 +958,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 97,
+            id: 96,
             destination: "edz",
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_3.webp",
@@ -974,7 +966,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 98,
+            id: 97,
             destination: "edz",
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_4.webp",
@@ -982,7 +974,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 99,
+            id: 98,
             destination: "edz",
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_5.webp",
@@ -990,7 +982,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 100,
+            id: 99,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_4.webp",
@@ -998,7 +990,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 101,
+            id: 100,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_5.webp",
@@ -1006,7 +998,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 102,
+            id: 101,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_6.webp",
@@ -1014,7 +1006,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 103,
+            id: 102,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_7.webp",
@@ -1022,7 +1014,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 104,
+            id: 103,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_8.webp",
@@ -1030,7 +1022,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 105,
+            id: 104,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_4.webp",
@@ -1038,7 +1030,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 106,
+            id: 105,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_5.webp",
@@ -1046,7 +1038,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 107,
+            id: 106,
             destination: "titan",
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_6.webp",
@@ -1054,7 +1046,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 108,
+            id: 107,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_1.webp",
@@ -1062,7 +1054,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 109,
+            id: 108,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_2.webp",
@@ -1070,7 +1062,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 110,
+            id: 109,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_3.webp",
@@ -1078,7 +1070,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 111,
+            id: 110,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_4.webp",
@@ -1086,7 +1078,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 112,
+            id: 111,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_5.webp",
@@ -1094,7 +1086,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 113,
+            id: 112,
             destination: "moon",
             area: "anchor_of_light",
             imageUrl: "assets/locations/moon_anchor_of_light_3.webp",
@@ -1102,7 +1094,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 114,
+            id: 113,
             destination: "moon",
             area: "archers_line",
             imageUrl: "assets/locations/moon_archers_line_3.webp",
@@ -1110,7 +1102,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 115,
+            id: 114,
             destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_3.webp",
@@ -1118,7 +1110,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 116,
+            id: 115,
             destination: "moon",
             area: "sorrows_harbor",
             imageUrl: "assets/locations/moon_sorrows_harbor_3.webp",
@@ -1126,7 +1118,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 117,
+            id: 116,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_9.webp",
@@ -1134,7 +1126,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 118,
+            id: 117,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_10.webp",
@@ -1142,7 +1134,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 119,
+            id: 118,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_11.webp",
@@ -1150,7 +1142,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 120,
+            id: 119,
             destination: "europa",
             area: "beyond",
             imageUrl: "assets/locations/europa_beyond_1.webp",
