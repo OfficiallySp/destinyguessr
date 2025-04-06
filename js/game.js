@@ -13,7 +13,9 @@ let gameState = {
     results: [],
     isRoundComplete: false,
     timer: null,
-    timeRemaining: 15
+    timeRemaining: 60,
+    totalTimeLimit: 300, // 5 minutes total for all rounds (60 seconds × 5 rounds)
+    gameStartTime: null
 };
 
 // DOM Elements
@@ -35,7 +37,7 @@ const submittedByElement = document.getElementById('submitted-by');
 const gameStatsDiv = document.querySelector('.game-stats');
 const timerElement = document.createElement('div');
 timerElement.className = 'timer';
-timerElement.innerHTML = 'Time: <span id="time-remaining">15</span>s';
+timerElement.innerHTML = 'Time: <span id="time-remaining">300</span>s';
 gameStatsDiv.appendChild(timerElement);
 const timeRemainingElement = document.getElementById('time-remaining');
 
@@ -64,7 +66,9 @@ function resetGame() {
         results: [],
         isRoundComplete: false,
         timer: null,
-        timeRemaining: 20
+        timeRemaining: 300, // Start with full time
+        totalTimeLimit: 300,
+        gameStartTime: new Date()
     };
 }
 
@@ -74,7 +78,8 @@ function startNewRound() {
     gameState.guess.destination = null;
     gameState.guess.area = null;
     gameState.isRoundComplete = false;
-    gameState.timeRemaining = 20;
+
+    // Don't reset timeRemaining here to allow it to persist between rounds
 
     // Show image info
     document.querySelector('.image-info').classList.remove('hidden');
@@ -85,8 +90,10 @@ function startNewRound() {
     // Update UI
     updateUI();
 
-    // Start the timer
-    startTimer();
+    // If timer is not running, start it
+    if (!gameState.timer) {
+        startTimer();
+    }
 }
 
 // Start the timer
@@ -96,13 +103,6 @@ function startTimer() {
         clearInterval(gameState.timer);
         gameState.timer = null;
     }
-
-    // Reset time remaining
-    gameState.timeRemaining = 20;
-    timeRemainingElement.textContent = gameState.timeRemaining;
-
-    // Reset timer visual state
-    timerElement.setAttribute('data-time', 'normal');
 
     // Start a new timer
     gameState.timer = setInterval(function() {
@@ -114,9 +114,11 @@ function startTimer() {
             timeRemainingElement.textContent = gameState.timeRemaining;
 
             // Update timer visual state based on time remaining
-            if (gameState.timeRemaining <= 5) {
+            const timePercentage = (gameState.timeRemaining / gameState.totalTimeLimit) * 100;
+
+            if (timePercentage <= 10) {
                 timerElement.setAttribute('data-time', 'danger');
-            } else if (gameState.timeRemaining <= 10) {
+            } else if (timePercentage <= 30) {
                 timerElement.setAttribute('data-time', 'warning');
             } else {
                 timerElement.setAttribute('data-time', 'normal');
@@ -486,9 +488,19 @@ function nextRound() {
 
 // End game
 function endGame() {
-    // Save final score
+    // Clear timer if active
+    if (gameState.timer) {
+        clearInterval(gameState.timer);
+        gameState.timer = null;
+    }
+
+    // Calculate total time taken
+    const totalTimeTaken = gameState.totalTimeLimit - gameState.timeRemaining;
+
+    // Save final score and time taken
     localStorage.setItem('destinyGuessr_finalScore', gameState.score);
     localStorage.setItem('destinyGuessr_results', JSON.stringify(gameState.results));
+    localStorage.setItem('destinyGuessr_timeTaken', totalTimeTaken);
 
     // Remove game in progress flag
     localStorage.removeItem('destinyGuessr_gameInProgress');
