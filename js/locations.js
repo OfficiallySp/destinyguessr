@@ -655,6 +655,13 @@ const locations = {
             imageUrl: "assets/locations/neomuna_zephyr_concourse_2.webp",
             difficulty: "hard"
         },
+        {
+            id: 72,
+            destination: "moon",
+            area: "sorrows_harbor",
+            imageUrl: "assets/locations/moon_sorrows_harbor_4.webp",
+            difficulty: "hard"
+        },
 
     ]
 };

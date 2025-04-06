@@ -233,7 +233,7 @@ p {
 }
 
 .how-to-play {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: rgba(35, 43, 58, 0.7);
     padding: 1.5rem;
@@ -668,4 +668,90 @@ footer::before {
 .difficulty-hard {
     background-color: rgba(255, 0, 0, 0.5); /* Red for hard */
     color: #ffffff;
+}
+
+/* Submission Form Styles */
+.submission-form {
+    background-color: rgba(35, 43, 58, 0.5);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.submission-form p {
+    margin-bottom: 1rem;
+}
+
+.submission-form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.submission-form span {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.submission-form input,
+.submission-form select,
+.submission-form textarea {
+    background-color: rgba(12, 15, 24, 0.7);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    border-radius: 2px;
+    color: var(--text-color);
+    font-family: var(--destiny-font);
+}
+
+.submission-form input:focus,
+.submission-form select:focus,
+.submission-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(94, 165, 194, 0.3);
+}
+
+.submission-form input[type="file"] {
+    padding: 0.5rem;
+    border: 1px dashed var(--border-color);
+    background-color: rgba(12, 15, 24, 0.4);
+}
+
+.submission-guidelines {
+    margin-bottom: 1.5rem;
+}
+
+.submission-guidelines ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.submission-guidelines li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.submission-result {
+    margin: 1rem 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .submission-form label {
+        flex-direction: column;
+    }
+
+    .submission-form span {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
 }

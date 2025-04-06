@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Images - DestinyGuessr</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/avif" href="assets/favicon.avif">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="assets/favicon.avif" alt="DestinyGuessr Logo" class="logo-image">
+                <h1>DestinyGuessr</h1>
+            </div>
+            <p>Test your knowledge of Destiny 2 locations</p>
+        </header>
+
+        <main>
+            <div class="how-to-play">
+                <h2>Submit Your Screenshots</h2>
+                <p>Help expand the DestinyGuessr database by submitting your own Destiny 2 screenshots!</p>
+                <p>Note: for bulk submissions, please use the <a href="https://github.com/officiallysp/destinyguessr">GitHub repo</a></p>
+
+                <div class="submission-guidelines">
+                    <h3>Submission Guidelines:</h3>
+                    <ul>
+                        <li>Screenshots should be clear and high quality (1080p or higher)</li>
+                        <li>Include the destination and specific area name</li>
+                        <li>Files should be in JPG or PNG format (preferred)</li>
+                        <li>Avoid spoilers from unreleased content</li>
+                        <li>No UI elements in the screenshots (Turn HUD off in settings)</li>
+                    </ul>
+                </div>
+
+                <form name="locationSubmission" enctype="multipart/form-data" data-netlify="true" class="submission-form">
+                    <p>
+                        <label>
+                            <span>Your username (for credit):</span>
+                            <input name="name" type="text" required />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Destination:</span>
+                            <input name="destination" type="text" required placeholder="e.g. Europa, Moon, etc." />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Specific Area:</span>
+                            <input name="area" type="text" required placeholder="e.g. Eventide Ruins, Hellmouth, etc." />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Difficulty (1-3):</span>
+                            <select name="difficulty" required>
+                                <option value="1">1 - Easy (obvious landmarks)</option>
+                                <option value="2">2 - Medium (some recognizable features)</option>
+                                <option value="3">3 - Hard (subtle hints only)</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Screenshot File:</span>
+                            <input name="screenshot" type="file" accept="image/png,image/jpeg,image/avif" required />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Additional Notes:</span>
+                            <textarea name="notes" rows="3" placeholder="Any additional information about this location..."></textarea>
+                        </label>
+                    </p>
+                    <button type="submit" class="btn btn-primary">Submit Screenshot</button>
+                </form>
+                <p class="submission-result"></p>
+
+                <div class="nav-links">
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by <a href="https://officiallysp.net">officiallysp</a></p>
+            <p>DestinyGuessr is a fan-made project and is not affiliated with Bungie, Inc.</p>
+            <p>Destiny, Destiny 2, and all related content are trademarks of Bungie, Inc.</p>
+        </footer>
+    </div>
+
+    <script src="js/submit.js"></script>
+</body>
+</html>
