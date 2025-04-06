@@ -56,7 +56,8 @@ const locations = {
                 { id: "hellmouth", name: "Hellmouth" },
                 { id: "anchor_of_light", name: "Anchor of Light" },
                 { id: "sorrows_harbor", name: "Sorrow's Harbor" },
-                { id: "sanctuary", name: "Sanctuary" }
+                { id: "sanctuary", name: "Sanctuary" },
+                { id: "scarlet_keep", name: "Scarlet Keep" }
             ]
         },
         {
@@ -102,7 +103,15 @@ const locations = {
                 { id: "zephyr_concourse", name: "Zephyr Concourse" },
                 { id: "ahimsa_park", name: "Ahimsa Park" },
                 { id: "liming_harbor", name: "Liming Harbor" },
-                { id: "striders_gate", name: "Striders' Gate" }
+                { id: "striders_gate", name: "Striders' Gate" },
+                { id: "veil_containment", name: "Veil Containment" },
+                { id: "irkalla_complex", name: "Irkalla Complex" },
+                { id: "esi_terminal", name: "Esi Terminal" },
+                { id: "mayas_retreat", name: "Maya's Retreat" },
+                { id: "typhon_imperator", name: "Typhon Imperator" },
+                { id: "the_gardens", name: "The Gardens" },
+                { id: "the_gardens", name: "The Gardens" },
+                { id: "the_gardens", name: "The Gardens" },
             ]
         },
         {
@@ -169,8 +178,8 @@ const locations = {
         {
             id: 2,
             destination: "cosmodrome",
-            area: "the_steppes",
-            imageUrl: "assets/locations/cosmodrome_the_steppes_1.webp",
+            area: "mothyards",
+            imageUrl: "assets/locations/cosmodrome_mothyards_1.webp",
             difficulty: "easy"
         },
         {
@@ -316,8 +325,8 @@ const locations = {
         {
             id: 23,
             destination: "tangled_shore",
-            area: "jetsam_saturn",
-            imageUrl: "assets/locations/tangled_shore_jetsam_saturn_1.webp",
+            area: "soriks_cut",
+            imageUrl: "assets/locations/tangled_shore_soriks_cut_3.webp",
             difficulty: "hard"
         },
         {
@@ -330,8 +339,8 @@ const locations = {
         {
             id: 25,
             destination: "dreaming_city",
-            area: "harbingers_seclude",
-            imageUrl: "assets/locations/dreaming_city_harbingers_seclude_1.webp",
+            area: "spine_of_keres",
+            imageUrl: "assets/locations/dreaming_city_spine_of_keres_4.webp",
             difficulty: "medium"
         },
         {
@@ -490,9 +499,9 @@ const locations = {
         },
         {
             id: 48,
-            destination: "europa",
-            area: "glassway",
-            imageUrl: "assets/locations/europa_glassway_4.webp",
+            destination: "dreaming_city",
+            area: "the_strand",
+            imageUrl: "assets/locations/dreaming_city_the_strand_4.webp",
             difficulty: "hard"
         },
         {
@@ -644,8 +653,8 @@ const locations = {
         {
             id: 70,
             destination: "neomuna",
-            area: "zephyr_concourse",
-            imageUrl: "assets/locations/neomuna_zephyr_concourse_1.webp",
+            area: "irkalla_complex",
+            imageUrl: "assets/locations/neomuna_irkalla_complex_1.webp",
             difficulty: "hard"
         },
         {
@@ -662,7 +671,27 @@ const locations = {
             imageUrl: "assets/locations/moon_sorrows_harbor_4.webp",
             difficulty: "hard"
         },
-
+        {
+            id: 73,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_2.webp",
+            difficulty: "medium"
+        },
+        {
+            id: 74,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_3.webp",
+            difficulty: "easy"
+        },
+        {
+            id: 75,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_4.webp",
+            difficulty: "hard"
+        }
     ]
 };
 // Ranks based on score performance
