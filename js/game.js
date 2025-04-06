@@ -29,6 +29,7 @@ const nextRoundButton = document.getElementById('next-round');
 const resultFeedback = document.getElementById('result-feedback');
 const locationIdElement = document.getElementById('location-id');
 const difficultyBadgeElement = document.getElementById('difficulty-badge');
+const submittedByElement = document.getElementById('submitted-by');
 
 // Create timer element
 const gameStatsDiv = document.querySelector('.game-stats');
@@ -274,6 +275,9 @@ function updateUI() {
         locationImage.onerror = function() {
             locationImage.src = 'assets/location_placeholder.avif';
         };
+
+        // Update submittedBy element
+        submittedByElement.textContent = gameState.currentLocation.submittedBy;
     }
 
     // Generate destination options
