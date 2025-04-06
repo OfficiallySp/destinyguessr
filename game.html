@@ -65,5 +65,13 @@
 
     <script src="js/locations.js"></script>
     <script src="js/game.js"></script>
+
+    <!-- Hidden form for Netlify to detect -->
+    <form name="problemReport" netlify hidden>
+        <input type="hidden" name="imageId" />
+        <input type="radio" name="issueType" value="wrong-location" />
+        <input type="radio" name="issueType" value="not-loading" />
+        <textarea name="details"></textarea>
+    </form>
 </body>
 </html>

@@ -195,22 +195,22 @@ function showTimeoutResult() {
         <button id="report-problem-btn" class="btn btn-small">Report Problem</button>
         <div id="report-problem-form" class="report-form hidden">
             <h4>Report an Issue with this Image</h4>
-            <form name="problemReport" method="POST" data-netlify="true">
+            <form name="problemReport" method="POST" netlify>
                 <input type="hidden" name="form-name" value="problemReport" />
-                <input type="hidden" id="report-image-id" name="imageId" value="${gameState.currentLocation.id}" />
+                <input type="hidden" name="imageId" value="${gameState.currentLocation.id}" />
 
                 <p>
-                    <label>
-                        <span>What's wrong with this image?</span>
-                        <select name="issueType" required>
-                            <option value="">Select an issue</option>
-                            <option value="wrong-location">Incorrect location label</option>
-                            <option value="low-quality">Low quality image</option>
-                            <option value="duplicate">Duplicate image</option>
-                            <option value="offensive">Offensive content</option>
-                            <option value="other">Other issue</option>
-                        </select>
-                    </label>
+                    <span>What's wrong with this image?</span>
+                    <div class="radio-options" style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+                        <label>
+                            <input type="radio" name="issueType" value="wrong-location" required>
+                            Incorrect location label
+                        </label>
+                        <label>
+                            <input type="radio" name="issueType" value="not-loading" required>
+                            Picture not loading
+                        </label>
+                    </div>
                 </p>
                 <p>
                     <label>
@@ -566,9 +566,9 @@ function showRoundResult() {
         <button id="report-problem-btn" class="btn btn-small">Report Problem</button>
         <div id="report-problem-form" class="report-form hidden">
             <h4>Report an Issue with this Image</h4>
-            <form name="problemReport" method="POST" data-netlify="true">
+            <form name="problemReport" method="POST" netlify>
                 <input type="hidden" name="form-name" value="problemReport" />
-                <input type="hidden" id="report-image-id" name="imageId" value="${gameState.currentLocation.id}" />
+                <input type="hidden" name="imageId" value="${gameState.currentLocation.id}" />
 
                 <p>
                     <span>What's wrong with this image?</span>
@@ -637,12 +637,18 @@ function setupReportProblem() {
             reportResult.textContent = 'Submitting report...';
             reportResult.style.color = 'var(--primary-color)';
 
-            // Use FormData for the submission
+            // Get form data
             const formData = new FormData(reportForm);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
 
+            // Submit the form using fetch
             fetch('/', {
                 method: 'POST',
-                body: formData
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formObject).toString()
             })
             .then(() => {
                 // Success message
