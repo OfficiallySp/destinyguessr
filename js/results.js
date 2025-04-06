@@ -7,6 +7,8 @@ const rankDescriptionElement = document.getElementById('rank-description');
 const roundsContainer = document.getElementById('rounds-container');
 const playAgainButton = document.getElementById('play-again');
 const shareResultsButton = document.getElementById('share-results');
+const timeInfoElement = document.getElementById('time-info');
+const timeRemainingElement = document.getElementById('time-remaining-display');
 
 // Initialize the results page
 function initResultsPage() {
@@ -14,6 +16,20 @@ function initResultsPage() {
     const finalScore = localStorage.getItem('destinyGuessr_finalScore');
     const resultsJson = localStorage.getItem('destinyGuessr_results');
     const results = resultsJson ? JSON.parse(resultsJson) : [];
+
+    // Check if timer was enabled for this game
+    const timerEnabled = localStorage.getItem('destinyGuessr_timerEnabled') === 'true';
+
+    // Display time remaining if timer was enabled
+    if (timerEnabled) {
+        const timeTaken = localStorage.getItem('destinyGuessr_timeTaken');
+        const timeRemaining = localStorage.getItem('destinyGuessr_timeRemaining');
+
+        if (timeRemaining) {
+            timeRemainingElement.textContent = timeRemaining;
+            timeInfoElement.classList.remove('hidden');
+        }
+    }
 
     // Display final score
     finalScoreElement.textContent = finalScore;
@@ -94,7 +110,15 @@ function shareResults() {
     const score = finalScoreElement.textContent;
     const rank = rankTitleElement.textContent;
 
-    const shareText = `I just scored ${score} points in DestinyGuessr and earned the rank of "${rank}"! Can you beat my score? #DestinyGuessr`;
+    let shareText = `I just scored ${score} points in DestinyGuessr and earned the rank of "${rank}"!`;
+
+    // Add time remaining info if available
+    if (!timeInfoElement.classList.contains('hidden')) {
+        const timeRemaining = timeRemainingElement.textContent;
+        shareText += ` With ${timeRemaining} seconds remaining!`;
+    }
+
+    shareText += " Can you beat my score? #DestinyGuessr";
 
     // Use clipboard copy for sharing
     copyToClipboard(shareText);

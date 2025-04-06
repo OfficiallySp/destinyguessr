@@ -523,10 +523,17 @@ function endGame() {
     // Calculate total time taken
     const totalTimeTaken = gameState.totalTimeLimit - gameState.timeRemaining;
 
-    // Save final score and time taken
+    // Save final score, time taken, and time remaining
     localStorage.setItem('destinyGuessr_finalScore', gameState.score);
     localStorage.setItem('destinyGuessr_results', JSON.stringify(gameState.results));
     localStorage.setItem('destinyGuessr_timeTaken', totalTimeTaken);
+
+    // Only save time remaining if timer was enabled
+    if (gameState.timerEnabled) {
+        localStorage.setItem('destinyGuessr_timeRemaining', gameState.timeRemaining);
+    } else {
+        localStorage.removeItem('destinyGuessr_timeRemaining');
+    }
 
     // Remove game in progress flag
     localStorage.removeItem('destinyGuessr_gameInProgress');
