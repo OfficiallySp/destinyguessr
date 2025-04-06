@@ -811,7 +811,7 @@ const locations = {
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_2.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 78,
@@ -819,7 +819,7 @@ const locations = {
             area: "anchor_of_light",
             imageUrl: "assets/locations/moon_anchor_of_light_2.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 79,
@@ -827,7 +827,7 @@ const locations = {
             area: "braytech_futurescape",
             imageUrl: "assets/locations/mars_braytech_futurescape_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 80,
@@ -835,7 +835,7 @@ const locations = {
             area: "glacial_drift",
             imageUrl: "assets/locations/mars_glacial_drift_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 81,
@@ -843,7 +843,7 @@ const locations = {
             area: "mercury",
             imageUrl: "assets/locations/mercury_mercury_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 82,
@@ -851,7 +851,7 @@ const locations = {
             area: "sirens_watch",
             imageUrl: "assets/locations/titan_sirens_watch_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 83,
@@ -859,7 +859,7 @@ const locations = {
             area: "the_rig",
             imageUrl: "assets/locations/titan_the_rig_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 84,
@@ -867,7 +867,7 @@ const locations = {
             area: "the_rupture",
             imageUrl: "assets/locations/io_the_rupture_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 85,
@@ -875,7 +875,7 @@ const locations = {
             area: "trostland",
             imageUrl: "assets/locations/edz_trostland_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 86,
@@ -883,7 +883,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_1.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 87,
@@ -891,7 +891,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_2.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 88,
@@ -899,7 +899,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_3.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 89,
@@ -907,7 +907,7 @@ const locations = {
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_1.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 90,
@@ -915,7 +915,7 @@ const locations = {
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_2.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 91,
@@ -923,7 +923,7 @@ const locations = {
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_3.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 92,
@@ -931,7 +931,7 @@ const locations = {
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_4.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 93,
@@ -939,7 +939,7 @@ const locations = {
             area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_5.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 94,
@@ -947,7 +947,7 @@ const locations = {
             area: "artifact_edge",
             imageUrl: "assets/locations/nessus_artifact_edge_3.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 95,
@@ -955,7 +955,7 @@ const locations = {
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_1.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 96,
@@ -963,7 +963,7 @@ const locations = {
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_2.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 97,
@@ -971,7 +971,7 @@ const locations = {
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_3.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 98,
@@ -979,7 +979,7 @@ const locations = {
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_4.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 99,
@@ -987,7 +987,7 @@ const locations = {
             area: "firebase_hades",
             imageUrl: "assets/locations/edz_firebase_hades_5.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 100,
@@ -995,7 +995,7 @@ const locations = {
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_4.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 101,
@@ -1003,7 +1003,7 @@ const locations = {
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_5.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 102,
@@ -1011,7 +1011,7 @@ const locations = {
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_6.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 103,
@@ -1019,7 +1019,7 @@ const locations = {
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_7.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 104,
@@ -1027,7 +1027,7 @@ const locations = {
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_8.webp",
             difficulty: "easy",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 105,
@@ -1035,7 +1035,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_4.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 106,
@@ -1043,7 +1043,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_5.webp",
             difficulty: "medium",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 107,
@@ -1051,7 +1051,7 @@ const locations = {
             area: "solarium",
             imageUrl: "assets/locations/titan_solarium_6.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 108,
@@ -1059,91 +1059,103 @@ const locations = {
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_1.webp",
             difficulty: "hard",
-            submittedBy: "@shotsofdestiny"
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 109,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_2.webp",
-            difficulty: "hard"
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 110,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_3.webp",
-            difficulty: "medium"
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 111,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_4.webp",
-            difficulty: "hard"
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 112,
             destination: "nessus",
             area: "glade_of_echoes",
             imageUrl: "assets/locations/nessus_glade_of_echoes_5.webp",
-            difficulty: "easy"
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 113,
             destination: "moon",
             area: "anchor_of_light",
             imageUrl: "assets/locations/moon_anchor_of_light_3.webp",
-            difficulty: "medium"
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 114,
             destination: "moon",
             area: "archers_line",
             imageUrl: "assets/locations/moon_archers_line_3.webp",
-            difficulty: "medium"
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 115,
             destination: "moon",
             area: "archers_line",
             imageUrl: "assets/locations/moon_archers_line_4.webp",
-            difficulty: "hard"
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 116,
             destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_3.webp",
-            difficulty: "hard"
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 117,
             destination: "moon",
             area: "sorrows_harbor",
             imageUrl: "assets/locations/moon_sorrows_harbor_3.webp",
-            difficulty: "easy"
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 118,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_9.webp",
-            difficulty: "medium"
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 119,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_10.webp",
-            difficulty: "medium"
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
         },
         {
             id: 120,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_11.webp",
-            difficulty: "hard"
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
         },
     ]
 };
