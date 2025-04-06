@@ -1112,21 +1112,13 @@ const locations = {
         {
             id: 115,
             destination: "moon",
-            area: "archers_line",
-            imageUrl: "assets/locations/moon_archers_line_4.webp",
-            difficulty: "hard",
-            submittedBy: "bray.tech public repo"
-        },
-        {
-            id: 116,
-            destination: "moon",
             area: "hellmouth",
             imageUrl: "assets/locations/moon_hellmouth_3.webp",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 117,
+            id: 116,
             destination: "moon",
             area: "sorrows_harbor",
             imageUrl: "assets/locations/moon_sorrows_harbor_3.webp",
@@ -1134,7 +1126,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 118,
+            id: 117,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_9.webp",
@@ -1142,7 +1134,7 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 119,
+            id: 118,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_10.webp",
@@ -1150,13 +1142,21 @@ const locations = {
             submittedBy: "bray.tech public repo"
         },
         {
-            id: 120,
+            id: 119,
             destination: "edz",
             area: "outskirts",
             imageUrl: "assets/locations/edz_outskirts_11.webp",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
+        {
+            id: 120,
+            destination: "europa",
+            area: "beyond",
+            imageUrl: "assets/locations/europa_beyond_1.webp",
+            difficulty: "easy",
+            submittedBy: "OfficiallySp"
+        }
     ]
 };
 // Ranks based on score performance
