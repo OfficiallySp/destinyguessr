@@ -16,7 +16,8 @@ const locations = {
                 { id: "the_sludge", name: "The Sludge" },
                 { id: "the_gulch", name: "The Gulch" },
                 { id: "firebase_hades", name: "Firebase Hades" },
-                { id: "sunken_isles", name: "Sunken Isles" }
+                { id: "sunken_isles", name: "Sunken Isles" },
+                { id: "windswept_crag", name: "Windswept Crag" },
             ]
         },
         {
@@ -26,7 +27,8 @@ const locations = {
                 { id: "the_steppes", name: "The Steppes" },
                 { id: "mothyards", name: "Mothyards" },
                 { id: "skywatch", name: "Skywatch" },
-                { id: "forgotten_shore", name: "Forgotten Shore" }
+                { id: "forgotten_shore", name: "Forgotten Shore" },
+                { id: "grasp_of_avarice", name: "Grasp of Avarice" },
             ]
         },
         {
@@ -57,7 +59,9 @@ const locations = {
                 { id: "anchor_of_light", name: "Anchor of Light" },
                 { id: "sorrows_harbor", name: "Sorrow's Harbor" },
                 { id: "sanctuary", name: "Sanctuary" },
-                { id: "scarlet_keep", name: "Scarlet Keep" }
+                { id: "scarlet_keep", name: "Scarlet Keep" },
+                { id: "necropolis", name: "Necropolis" },
+                { id: "derelict_leviathan", name: "Derelict Leviathan" },
             ]
         },
         {
@@ -71,6 +75,7 @@ const locations = {
                 { id: "beyond", name: "Beyond" },
                 { id: "riis_reborn", name: "Riis Reborn" },
                 { id: "glassway", name: "The Glassway" },
+                { id: "vesper_station", name: "Vesper Station" },
             ]
         },
         {
@@ -94,6 +99,7 @@ const locations = {
                 { id: "miasma", name: "Miasma" },
                 { id: "fluorescent_canal", name: "Fluorescent Canal" },
                 { id: "enclave", name: "The Enclave" },
+                { id: "sunkern_pyramid", name: "Sunkern Pyramid" },
             ]
         },
         {
@@ -125,6 +131,7 @@ const locations = {
                 { id: "harbingers_seclude", name: "Harbinger's Seclude" },
                 { id: "the_confluence", name: "The Confluence" },
                 { id: "garden_esila", name: "Gardens of Esila" },
+                { id: "ascendant_plane", name: "Ascendant Plane" },
             ]
         },
         {
@@ -152,6 +159,18 @@ const locations = {
                 { id: "sirens_watch", name: "Siren's Watch" },
                 { id: "the_rig", name: "The Rig" },
                 { id: "solarium", name: "Solarium" },
+                { id: "ghosts_of_the_deep", name: "Ghosts of the Deep" },
+            ]
+        },
+        {
+            id: "mars",
+            name: "Mars",
+            areas: [
+                { id: "ares_spire", name: "Ares Spire" },
+                { id: "glacial_drift", name: "Glacial Drift" },
+                { id: "braytech_futurescape", name: "Braytech Futurescape" },
+                { id: "olympus_decent", name: "Olympus Decent" },
+                { id: "alton_dynamo", name: "Alton Dynamo" },
             ]
         },
         {
@@ -164,9 +183,17 @@ const locations = {
                 { id: "soriks_cut", name: "Soriks's Cut" },
 
             ]
-        }
+        },
+        {
+            id: "dreadnaught",
+            name: "The Dreadnaught",
+            areas: [
+                { id: "hull_breach", name: "Hull Breach" },
+                { id: "mausoleum", name: "Mausoleum" },
+                { id: "hall_of_souls", name: "Hall of Souls" },
+            ]
+        },
     ],
-
     locationData: [
         {
             id: 1,
@@ -297,8 +324,8 @@ const locations = {
         {
             id: 19,
             destination: "moon",
-            area: "sorrows_harbor",
-            imageUrl: "assets/locations/moon_sorrows_harbor_3.webp",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_5.webp",
             difficulty: "medium"
         },
         {
@@ -667,8 +694,8 @@ const locations = {
         {
             id: 72,
             destination: "moon",
-            area: "sorrows_harbor",
-            imageUrl: "assets/locations/moon_sorrows_harbor_4.webp",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_1.webp",
             difficulty: "hard"
         },
         {

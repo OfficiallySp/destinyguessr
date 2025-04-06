@@ -469,6 +469,12 @@ function nextRound() {
         // Increment round
         gameState.currentRound++;
 
+        // Hide step 2 (area selection)
+        step2Container.classList.add('hidden');
+
+        // Scroll to the top of the page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
         // Start new round
         startNewRound();
     }
