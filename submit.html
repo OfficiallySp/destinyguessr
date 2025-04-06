@@ -67,10 +67,18 @@
                     </p>
                     <p>
                         <label>
-                            <span>Screenshot File (8MB max):</span>
-                            <input name="screenshot" type="file" accept="image/png,image/jpeg,image/avif" required />
+                            <span>Screenshot File (1MB max):</span>
+                            <input name="screenshot" type="file" accept="image/png,image/jpeg,image/avif" required max-size="1048576" onchange="validateFileSize(this)" />
                             <span>You can use a service like <a href="https://tinypng.com/">TinyPNG</a> to compress the file size</span>
-
+                            <script>
+                                function validateFileSize(input) {
+                                    if (input.files[0].size > 1048576) { // 1MB = 1048576 bytes
+                                        alert('File size exceeds 1MB limit. Please compress your image or choose a smaller file.');
+                                        input.value = '';
+                                    }
+                                }
+                            </script>
+                        </label>
                         </label>
                     </p>
                     <p>
