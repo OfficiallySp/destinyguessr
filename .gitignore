@@ -38,3 +38,6 @@ out/
 
 # Pending/untagged location images
 assets/locations/pending_review/
+
+# Helper files
+js/validateLocations.js
