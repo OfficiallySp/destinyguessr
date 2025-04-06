@@ -188,6 +188,49 @@ function showTimeoutResult() {
     resultFeedback.innerHTML = feedbackHtml;
     resultFeedback.classList.remove('hidden');
 
+    // Add the report problem container
+    const reportContainer = document.createElement('div');
+    reportContainer.className = 'report-problem-container';
+    reportContainer.innerHTML = `
+        <button id="report-problem-btn" class="btn btn-small">Report Problem</button>
+        <div id="report-problem-form" class="report-form hidden">
+            <h4>Report an Issue with this Image</h4>
+            <form name="problemReport" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="problemReport" />
+                <input type="hidden" id="report-image-id" name="imageId" value="${gameState.currentLocation.id}" />
+
+                <p>
+                    <label>
+                        <span>What's wrong with this image?</span>
+                        <select name="issueType" required>
+                            <option value="">Select an issue</option>
+                            <option value="wrong-location">Incorrect location label</option>
+                            <option value="low-quality">Low quality image</option>
+                            <option value="duplicate">Duplicate image</option>
+                            <option value="offensive">Offensive content</option>
+                            <option value="other">Other issue</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>Additional details:</span>
+                        <textarea name="details" rows="2" placeholder="Please provide more information..."></textarea>
+                    </label>
+                </p>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-small btn-primary">Submit Report</button>
+                    <button type="button" id="cancel-report" class="btn btn-small btn-secondary">Cancel</button>
+                </div>
+            </form>
+            <p class="report-result"></p>
+        </div>
+    `;
+    resultFeedback.appendChild(reportContainer);
+
+    // Setup report problem functionality
+    setupReportProblem();
+
     // Update button states
     updateButtonStates();
 }
@@ -516,8 +559,114 @@ function showRoundResult() {
     resultFeedback.innerHTML = feedbackHtml;
     resultFeedback.classList.remove('hidden');
 
+    // Add the report problem container after setting the feedback HTML
+    const reportContainer = document.createElement('div');
+    reportContainer.className = 'report-problem-container';
+    reportContainer.innerHTML = `
+        <button id="report-problem-btn" class="btn btn-small">Report Problem</button>
+        <div id="report-problem-form" class="report-form hidden">
+            <h4>Report an Issue with this Image</h4>
+            <form name="problemReport" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="problemReport" />
+                <input type="hidden" id="report-image-id" name="imageId" value="${gameState.currentLocation.id}" />
+
+                <p>
+                    <span>What's wrong with this image?</span>
+                    <div class="radio-options" style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+                        <label>
+                            <input type="radio" name="issueType" value="wrong-location" required>
+                            Incorrect location label
+                        </label>
+                        <label>
+                            <input type="radio" name="issueType" value="not-loading" required>
+                            Picture not loading
+                        </label>
+                    </div>
+                </p>
+                <p>
+                    <label>
+                        <span>Additional details:</span>
+                        <textarea name="details" rows="2" placeholder="Please provide more information..."></textarea>
+                    </label>
+                </p>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-small btn-primary">Submit Report</button>
+                    <button type="button" id="cancel-report" class="btn btn-small btn-secondary">Cancel</button>
+                </div>
+            </form>
+            <p class="report-result"></p>
+        </div>
+    `;
+    resultFeedback.appendChild(reportContainer);
+
+    // Setup report problem functionality
+    setupReportProblem();
+
     // Update button states
     updateButtonStates();
+}
+
+// Setup report problem functionality
+function setupReportProblem() {
+    const reportProblemBtn = document.getElementById('report-problem-btn');
+    const reportProblemForm = document.getElementById('report-problem-form');
+    const cancelReportBtn = document.getElementById('cancel-report');
+    const reportForm = document.querySelector('form[name="problemReport"]');
+    const reportResult = document.querySelector('.report-result');
+
+    if (reportProblemBtn && reportProblemForm && cancelReportBtn && reportForm) {
+        // Toggle the report form visibility
+        reportProblemBtn.addEventListener('click', () => {
+            reportProblemForm.classList.toggle('hidden');
+            reportProblemBtn.classList.toggle('hidden');
+        });
+
+        // Hide the form when cancel is clicked
+        cancelReportBtn.addEventListener('click', () => {
+            reportProblemForm.classList.add('hidden');
+            reportProblemBtn.classList.remove('hidden');
+            reportForm.reset();
+            reportResult.textContent = '';
+        });
+
+        // Handle form submission
+        reportForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show a loading message
+            reportResult.textContent = 'Submitting report...';
+            reportResult.style.color = 'var(--primary-color)';
+
+            // Use FormData for the submission
+            const formData = new FormData(reportForm);
+
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => {
+                // Success message
+                reportResult.textContent = 'Thank you for reporting this issue!';
+                reportResult.style.color = 'var(--success-color)';
+
+                // Reset the form
+                reportForm.reset();
+
+                // Hide the form after 3 seconds
+                setTimeout(() => {
+                    reportProblemForm.classList.add('hidden');
+                    reportProblemBtn.classList.remove('hidden');
+                    reportResult.textContent = '';
+                }, 3000);
+            })
+            .catch((error) => {
+                // Error message
+                console.error('Error submitting report:', error);
+                reportResult.textContent = 'Something went wrong. Please try again.';
+                reportResult.style.color = 'var(--error-color)';
+            });
+        });
+    }
 }
 
 // Save game state to localStorage
