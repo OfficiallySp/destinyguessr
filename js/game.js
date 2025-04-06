@@ -15,7 +15,8 @@ let gameState = {
     timer: null,
     timeRemaining: 60,
     totalTimeLimit: 300, // 5 minutes total for all rounds (60 seconds × 5 rounds)
-    gameStartTime: null
+    gameStartTime: null,
+    timerEnabled: true // Default timer setting
 };
 
 // DOM Elements
@@ -44,8 +45,22 @@ const timeRemainingElement = document.getElementById('time-remaining');
 // Initialize the game
 function initGame() {
     try {
+        // Load timer preference
+        const timerPreference = localStorage.getItem('destinyGuessr_timerEnabled');
+
         // Start a new game
         resetGame();
+
+        // Set timer preference
+        if (timerPreference !== null) {
+            gameState.timerEnabled = timerPreference === 'true';
+        }
+
+        // Hide timer if disabled
+        if (!gameState.timerEnabled) {
+            timerElement.style.display = 'none';
+        }
+
         startNewRound();
     } catch (error) {
         console.error('Error initializing game:', error);
@@ -54,6 +69,10 @@ function initGame() {
 
 // Reset the game to initial state
 function resetGame() {
+    // Load timer preference
+    const timerPreference = localStorage.getItem('destinyGuessr_timerEnabled');
+    const timerEnabled = timerPreference !== null ? timerPreference === 'true' : true;
+
     gameState = {
         currentRound: 1,
         totalRounds: 5,
@@ -68,7 +87,8 @@ function resetGame() {
         timer: null,
         timeRemaining: 300, // Start with full time
         totalTimeLimit: 300,
-        gameStartTime: new Date()
+        gameStartTime: new Date(),
+        timerEnabled: timerEnabled
     };
 }
 
@@ -90,14 +110,17 @@ function startNewRound() {
     // Update UI
     updateUI();
 
-    // If timer is not running, start it
-    if (!gameState.timer) {
+    // If timer is enabled and not running, start it
+    if (gameState.timerEnabled && !gameState.timer) {
         startTimer();
     }
 }
 
 // Start the timer
 function startTimer() {
+    // Only start timer if enabled
+    if (!gameState.timerEnabled) return;
+
     // Clear any existing timer
     if (gameState.timer) {
         clearInterval(gameState.timer);
@@ -147,6 +170,9 @@ function startTimer() {
 
 // Handle timeout (time is up)
 function timeOut() {
+    // Only process timeout if timer is enabled
+    if (!gameState.timerEnabled) return;
+
     // Create a timeout result
     gameState.results.push({
         locationId: gameState.currentLocation.id,
