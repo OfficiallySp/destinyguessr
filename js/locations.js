@@ -31,6 +31,9 @@ const locations = {
                 { id: "forgotten_shore", name: "Forgotten Shore" },
                 { id: "the_breach", name: "The Breach" },
                 { id: "the_divide", name: "The Divide" },
+                { id: "lunar_complex", name: "Lunar Complex" },
+                { id: "terrestrial_complex", name: "Terrestrial Complex" },
+                { id: "the_grottos", name: "The Grottos" },
                 { id: "grasp_of_avarice", name: "Grasp of Avarice" },
             ]
         },
@@ -1157,7 +1160,87 @@ const locations = {
             imageUrl: "assets/locations/europa_glassway_4.avif",
             difficulty: "easy",
             submittedBy: "OfficiallySp"
-        }
+        },
+        {
+            id: 121,
+            destination: "cosmodrome",
+            area: "mothyards",
+            imageUrl: "assets/locations/cosmodrome_mothyards_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 122,
+            destination: "cosmodrome",
+            area: "skywatch",
+            imageUrl: "assets/locations/cosmodrome_skywatch_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 123,
+            destination: "cosmodrome",
+            area: "skywatch",
+            imageUrl: "assets/locations/cosmodrome_skywatch_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 124,
+            destination: "cosmodrome",
+            area: "the_steppes",
+            imageUrl: "assets/locations/cosmodrome_the_steppes_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 125,
+            destination: "cosmodrome",
+            area: "the_steppes",
+            imageUrl: "assets/locations/cosmodrome_the_steppes_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 126,
+            destination: "cosmodrome",
+            area: "terrestrial_complex",
+            imageUrl: "assets/locations/cosmodrome_terrestrial_complex_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 127,
+            destination: "cosmodrome",
+            area: "the_grottos",
+            imageUrl: "assets/locations/cosmodrome_the_grottos_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 128,
+            destination: "cosmodrome",
+            area: "forgotten_shore",
+            imageUrl: "assets/locations/cosmodrome_forgotten_shore_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 129,
+            destination: "cosmodrome",
+            area: "forgotten_shore",
+            imageUrl: "assets/locations/cosmodrome_forgotten_shore_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 130,
+            destination: "cosmodrome",
+            area: "lunar_complex",
+            imageUrl: "assets/locations/cosmodrome_lunar_complex_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
     ]
 };
 // Ranks based on score performance
