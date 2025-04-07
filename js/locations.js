@@ -753,8 +753,8 @@ const locations = {
         {
             id: 70,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_6.avif",
+            area: "quagmire",
+            imageUrl: "assets/locations/throne_world_quagmire_3.avif",
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },
