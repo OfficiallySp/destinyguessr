@@ -40,4 +40,4 @@ out/
 assets/locations/pending_review/
 
 # Helper files
-js/validateLocations.js
+validateLocations.js
