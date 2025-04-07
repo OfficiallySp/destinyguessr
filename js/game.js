@@ -266,6 +266,17 @@ function showTimeoutResult() {
 
 // Get a random location that hasn't been used yet
 function getRandomLocation() {
+    // Check for forced location ID in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const forcedLocationId = urlParams.get('locationId');
+
+    if (forcedLocationId) {
+        const forcedLocation = locations.locationData.find(loc => loc.id === parseInt(forcedLocationId));
+        if (forcedLocation) {
+            return forcedLocation;
+        }
+    }
+
     // Get all used location IDs in current game
     const usedLocationIds = gameState.results.map(result => result.locationId);
 

@@ -1165,8 +1165,8 @@ const locations = {
             id: 121,
             destination: "cosmodrome",
             area: "mothyards",
-            imageUrl: "assets/locations/cosmodrome_mothyards_1.avif",
-            difficulty: "hard",
+            imageUrl: "assets/locations/cosmodrome_mothyards_2.avif",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1174,7 +1174,7 @@ const locations = {
             destination: "cosmodrome",
             area: "skywatch",
             imageUrl: "assets/locations/cosmodrome_skywatch_1.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1182,7 +1182,7 @@ const locations = {
             destination: "cosmodrome",
             area: "skywatch",
             imageUrl: "assets/locations/cosmodrome_skywatch_2.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1190,7 +1190,7 @@ const locations = {
             destination: "cosmodrome",
             area: "the_steppes",
             imageUrl: "assets/locations/cosmodrome_the_steppes_1.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1206,7 +1206,7 @@ const locations = {
             destination: "cosmodrome",
             area: "terrestrial_complex",
             imageUrl: "assets/locations/cosmodrome_terrestrial_complex_1.avif",
-            difficulty: "hard",
+            difficulty: "medium",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1214,7 +1214,7 @@ const locations = {
             destination: "cosmodrome",
             area: "the_grottos",
             imageUrl: "assets/locations/cosmodrome_the_grottos_1.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1222,7 +1222,7 @@ const locations = {
             destination: "cosmodrome",
             area: "forgotten_shore",
             imageUrl: "assets/locations/cosmodrome_forgotten_shore_1.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1230,7 +1230,7 @@ const locations = {
             destination: "cosmodrome",
             area: "forgotten_shore",
             imageUrl: "assets/locations/cosmodrome_forgotten_shore_2.avif",
-            difficulty: "hard",
+            difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
         {
@@ -1238,7 +1238,7 @@ const locations = {
             destination: "cosmodrome",
             area: "lunar_complex",
             imageUrl: "assets/locations/cosmodrome_lunar_complex_1.avif",
-            difficulty: "hard",
+            difficulty: "medium",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
     ]
