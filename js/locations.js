@@ -51,11 +51,13 @@ const locations = {
             id: "pale_heart",
             name: "The Pale Heart",
             areas: [
-                { id: "the_landing", name: "The Landing" },
-                { id: "the_blooming", name: "The Blooming" },
-                { id: "the_impasse", name: "The Impasse" },
-                { id: "the_lost_city", name: "The Lost City" },
+                { id: "landing", name: "The Landing" },
+                { id: "blooming", name: "The Blooming" },
+                { id: "impasse", name: "The Impasse" },
+                { id: "transgression", name: "The Transgression" },
+                { id: "lost_city", name: "The Lost City" },
                 { id: "substratum", name: "Substratum" },
+                { id: "maelstrom", name: "Maelstrom" },
             ]
         },
         {
@@ -97,7 +99,11 @@ const locations = {
                 { id: "glade_of_echoes", name: "Glade of Echoes" },
                 { id: "the_cistern", name: "The Cistern" },
                 { id: "the_tangle", name: "The Tangle" },
-                { id: "hallows", name: "Hallows" }
+                { id: "hallows", name: "Hallows" },
+                { id: "sunkern_cavern", name: "Sunkern Cavern" },
+                { id: "chamber_of_water", name: "Chamber of Water" },
+                { id: "well_of_flame", name: "Well of Flame" },
+                { id: "chamber_of_sky", name: "Chamber of Sky" },
             ]
         },
         {
@@ -106,7 +112,7 @@ const locations = {
             areas: [
                 { id: "quagmire", name: "Quagmire" },
                 { id: "miasma", name: "Miasma" },
-                { id: "fluorescent_canal", name: "Fluorescent Canal" },
+                { id: "florescent_canal", name: "florescent Canal" },
                 { id: "enclave", name: "The Enclave" },
                 { id: "sunkern_pyramid", name: "Sunkern Pyramid" },
             ]
@@ -199,6 +205,14 @@ const locations = {
                 { id: "hall_of_souls", name: "Hall of Souls" },
             ]
         },
+        {
+            id: "venus",
+            name: "Venus",
+            areas: [
+                { id: "ishtar_sink", name: "Ishtar Sink" },
+                { id: "vault_of_glass", name: "Vault of Glass" },
+            ]
+        },
     ],
     locationData: [
         {
@@ -284,8 +298,8 @@ const locations = {
         {
             id: 11,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_1.avif",
+            area: "florescent_canal",
+            imageUrl: "assets/locations/throne_world_florescent_canal_1.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -428,8 +442,8 @@ const locations = {
         {
             id: 29,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_2.avif",
+            area: "florescent_canal",
+            imageUrl: "assets/locations/throne_world_florescent_canal_2.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -516,24 +530,24 @@ const locations = {
         {
             id: 40,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_3.avif",
+            area: "florescent_canal",
+            imageUrl: "assets/locations/throne_world_florescent_canal_3.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
         {
             id: 41,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_4.avif",
+            area: "florescent_canal",
+            imageUrl: "assets/locations/throne_world_florescent_canal_4.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
         {
             id: 42,
             destination: "throne_world",
-            area: "fluorescent_canal",
-            imageUrl: "assets/locations/throne_world_fluorescent_canal_5.avif",
+            area: "florescent_canal",
+            imageUrl: "assets/locations/throne_world_florescent_canal_5.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -1241,6 +1255,126 @@ const locations = {
             difficulty: "medium",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
+        {
+            id: 131,
+            destination: "nessus",
+            area: "artifact_edge",
+            imageUrl: "assets/locations/nessus_artifact_edge_5.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 132,
+            destination: "nessus",
+            area: "chamber_of_water",
+            imageUrl: "assets/locations/nessus_chamber_of_water_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 133,
+            destination: "nessus",
+            area: "exodus_blacksite",
+            imageUrl: "assets/locations/nessus_exodus_black_6.avif",
+            difficulty: "easy",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 134,
+            destination: "nessus",
+            area: "glade_of_echoes",
+            imageUrl: "assets/locations/nessus_glade_of_echoes_6.avif",
+            difficulty: "easy",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 135,
+            destination: "nessus",
+            area: "hallows",
+            imageUrl: "assets/locations/nessus_hallows_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 136,
+            destination: "nessus",
+            area: "sunkern_cavern",
+            imageUrl: "assets/locations/nessus_sunkern_cavern_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 137,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_2.avif",
+            difficulty: "easy",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 138,
+            destination: "nessus",
+            area: "the_tangle",
+            imageUrl: "assets/locations/nessus_the_tangle_1.avif",
+            difficulty: "easy",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 139,
+            destination: "nessus",
+            area: "watchers_grave",
+            imageUrl: "assets/locations/nessus_watchers_grave_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 140,
+            destination: "nessus",
+            area: "well_of_flame",
+            imageUrl: "assets/locations/nessus_well_of_flame_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 141,
+            destination: "nessus",
+            area: "chamber_of_sky",
+            imageUrl: "assets/locations/nessus_chamber_of_sky_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Totally_Not_A_Bot_FR"
+        },
+        {
+            id: 142,
+            destination: "nessus",
+            area: "watchers_grave",
+            imageUrl: "assets/locations/nessus_watchers_grave_2.avif",
+            difficulty: "medium",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 143,
+            destination: "tower",
+            area: "annex",
+            imageUrl: "assets/locations/tower_annex_1.avif",
+            difficulty: "easy",
+            submittedBy: "OfficiallySp"
+        },
+        {
+            id: 144,
+            destination: "pale_heart",
+            area: "maelstrom",
+            imageUrl: "assets/locations/pale_heart_maelstrom_1.avif",
+            difficulty: "easy",
+            submittedBy: "OfficiallySp"
+        },
+        {
+            id: 145,
+            destination: "venus",
+            area: "vault_of_glass",
+            imageUrl: "assets/locations/venus_vault_of_glass_1.avif",
+            difficulty: "easy",
+            submittedBy: "OfficiallySp"
+        }
     ]
 };
 // Ranks based on score performance
