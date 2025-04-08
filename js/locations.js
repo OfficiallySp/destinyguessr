@@ -95,7 +95,7 @@ const locations = {
             areas: [
                 { id: "exodus_black", name: "Exodus Black" },
                 { id: "artifact_edge", name: "Artifact's Edge" },
-                { id: "watcher_grave", name: "Watcher's Grave" },
+                { id: "watchers_grave", name: "Watcher's Grave" },
                 { id: "glade_of_echoes", name: "Glade of Echoes" },
                 { id: "the_cistern", name: "The Cistern" },
                 { id: "the_tangle", name: "The Tangle" },
@@ -794,8 +794,8 @@ const locations = {
         {
             id: 73,
             destination: "moon",
-            area: "scarlet_keep",
-            imageUrl: "assets/locations/moon_scarlet_keep_3.avif",
+            area: "sorrows_harbour",
+            imageUrl: "assets/locations/moon_scarlet_keep_3.avif",//change this later
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },
@@ -1114,8 +1114,8 @@ const locations = {
         {
             id: 113,
             destination: "moon",
-            area: "archers_line",
-            imageUrl: "assets/locations/moon_archers_line_3.avif",
+            area: "sanctuary",
+            imageUrl: "assets/locations/moon_archers_line_3.avif",//change this to sanctuary
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
