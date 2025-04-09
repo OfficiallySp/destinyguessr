@@ -794,7 +794,7 @@ const locations = {
         {
             id: 73,
             destination: "moon",
-            area: "sorrows_harbour",
+            area: "sorrows_harbor",
             imageUrl: "assets/locations/moon_scarlet_keep_3.avif",//change this later
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
@@ -1274,7 +1274,7 @@ const locations = {
         {
             id: 133,
             destination: "nessus",
-            area: "exodus_blacksite",
+            area: "exodus_black",
             imageUrl: "assets/locations/nessus_exodus_black_6.avif",
             difficulty: "easy",
             submittedBy: "u/Totally_Not_A_Bot_FR"
