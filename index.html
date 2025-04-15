@@ -36,12 +36,34 @@
                 <div class="game-stats">
 
                     <p>
-                        <strong>Current Locations:</strong> 145
+                        <strong>Locations:</strong> 200
                     </p>
                     <p>
-                        <strong>Locations last updated:</strong> 08/04/2025
+                        <strong>Updated:</strong> 15/04/2025
                     </p>
                 </div>
+
+                <div class="game-modes">
+                    <h3>Select Game Mode</h3>
+                    <div class="mode-options">
+                        <div class="mode-option" id="normal-mode">
+                            <h4>Normal Mode</h4>
+                            <p>5 locations to guess</p>
+                            <p>Pick a destination and area to guess</p>
+                            <p>Score as many points as possible</p>
+                            <div class="mode-icon">🔍</div>
+                        </div>
+                        <div class="mode-option" id="infinite-mode">
+                            <h4>Hardcore Mode</h4>
+                            <p>Test yourself on every location in the database</p>
+                            <p>One mistake and it's over!</p>
+                            <p>How far can you go?, can you get a perfect run?</p>
+                            <div class="mode-icon">☠️</div>
+                            <div class="mode-badge">CHALLENGE</div>
+                        </div>
+                    </div>
+                </div>
+
                 <button id="start-game" class="btn btn-primary">Start Game</button>
 
                 <div class="game-options">
@@ -55,22 +77,15 @@
                 </div>
             </div>
 
-            <div class="how-to-play">
-                <h2>How to Play</h2>
-                <ol>
-                    <li>You'll be shown a screenshot from somewhere in Destiny 2</li>
-                    <li>Select the destination (planet/moon) you think it's from</li>
-                    <li>Then, select the specific area within that destination</li>
-                    <li>Score points based on how accurate your guess is</li>
-                    <li>Challenge yourself with 5 locations per round</li>
-                </ol>
-                <p>Want to add screenshots to the database?</p>
-                <a href="submit.html" class="btn btn-small btn-accent">Submit Screenshots</a>
-            </div>
-
             <div class="changelog">
                 <h2>Changelog</h2>
                 <div class="changelog-recent">
+                    <div class="changelog-entry">
+                        <p><strong>15/04/2025</strong> - Added 55 more locations & Hardcore Mode</p>
+                    </div>
+                </div>
+                <details class="changelog-details">
+                    <summary>Show older updates</summary>
                     <div class="changelog-entry">
                         <p><strong>09/04/2025</strong> - fixed multiple location names causing an unknown location error to be displayed</p>
                     </div>
@@ -86,9 +101,6 @@
                     <div class="changelog-entry">
                         <p><strong>05/04/2025</strong> - Fixed bugs and missing images, Increased time limit to 20 seconds</p>
                     </div>
-                </div>
-                <details class="changelog-details">
-                    <summary>Show older updates</summary>
                     <div class="changelog-entry">
                         <p><strong>04/04/2025</strong> - Closed beta release, New UI and first batch of locations</p>
                     </div>
@@ -103,6 +115,8 @@
                     </div>
                 </details>
             </div>
+            <p>Want to add screenshots to the database?</p>
+            <a href="submit.html" class="btn btn-small btn-accent">Submit Screenshots</a>
         </main>
 
         <footer>

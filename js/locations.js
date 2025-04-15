@@ -19,6 +19,11 @@ const locations = {
                 { id: "sunken_isles", name: "Sunken Isles" },
                 { id: "windswept_crag", name: "Windswept Crag" },
                 { id: "the_farm", name: "The Farm" },
+                { id: "salt_mines", name: "Salt Mines" },
+                { id: "maevic_square", name: "Maevic Square" },
+                { id: "sojourners_camp", name: "Sojourners Camp" },
+                { id: "niobe_labs", name: "Niobe Labs" },
+                { id: "the_tunnels", name: "The Tunnels" }
             ]
         },
         {
@@ -171,6 +176,10 @@ const locations = {
                 { id: "sirens_watch", name: "Siren's Watch" },
                 { id: "the_rig", name: "The Rig" },
                 { id: "solarium", name: "Solarium" },
+                { id: "sinking_docks", name: "Sinking Docks" },
+                { id: "arboretum", name: "Arboretum" },
+                { id: "festering_halls", name: "Festering Halls" },
+                { id: "tidal_anchor", name: "Tidal Anchor" },
                 { id: "ghosts_of_the_deep", name: "Ghosts of the Deep" },
             ]
         },
@@ -213,6 +222,16 @@ const locations = {
                 { id: "vault_of_glass", name: "Vault of Glass" },
             ]
         },
+        {
+            id: "unknown_space",
+            name: "Unknown Space",
+            areas: [
+                { id: "heaven_hell", name: "Heaven/Hell" },
+                { id: "queens_court", name: "Queen's Court" },
+                { id: "eternity", name: "Eternity" },
+                { id: "third_spire", name: "The Third Spire" }
+            ]
+        }
     ],
     locationData: [
         {
@@ -795,7 +814,7 @@ const locations = {
             id: 73,
             destination: "moon",
             area: "sorrows_harbor",
-            imageUrl: "assets/locations/moon_scarlet_keep_3.avif",//change this later
+            imageUrl: "assets/locations/moon_sorrows_harbor_4.avif",
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },
@@ -890,24 +909,24 @@ const locations = {
         {
             id: 85,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_1.avif",
+            area: "arboretum",
+            imageUrl: "assets/locations/titan_arboretum_1.avif",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 86,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_2.avif",
+            area: "arboretum",
+            imageUrl: "assets/locations/titan_arboretum_2.avif",
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 87,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_3.avif",
+            area: "arboretum",
+            imageUrl: "assets/locations/titan_arboretum_3.avif",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
@@ -1042,24 +1061,24 @@ const locations = {
         {
             id: 104,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_4.avif",
+            area: "festering_halls",
+            imageUrl: "assets/locations/titan_festering_halls_1.avif",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 105,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_5.avif",
+            area: "festering_halls",
+            imageUrl: "assets/locations/titan_festering_halls_2.avif",
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 106,
             destination: "titan",
-            area: "solarium",
-            imageUrl: "assets/locations/titan_solarium_6.avif",
+            area: "festering_halls",
+            imageUrl: "assets/locations/titan_festering_halls_3.avif",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
@@ -1115,7 +1134,7 @@ const locations = {
             id: 113,
             destination: "moon",
             area: "sanctuary",
-            imageUrl: "assets/locations/moon_archers_line_3.avif",//change this to sanctuary
+            imageUrl: "assets/locations/moon_sanctuary_1.avif",
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
@@ -1138,24 +1157,24 @@ const locations = {
         {
             id: 116,
             destination: "edz",
-            area: "outskirts",
-            imageUrl: "assets/locations/edz_outskirts_9.avif",
+            area: "sojourners_camp",
+            imageUrl: "assets/locations/edz_sojourners_camp_1.avif",
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 117,
             destination: "edz",
-            area: "outskirts",
-            imageUrl: "assets/locations/edz_outskirts_10.avif",
+            area: "sojourners_camp",
+            imageUrl: "assets/locations/edz_sojourners_camp_2.avif",
             difficulty: "medium",
             submittedBy: "bray.tech public repo"
         },
         {
             id: 118,
             destination: "edz",
-            area: "outskirts",
-            imageUrl: "assets/locations/edz_outskirts_11.avif",
+            area: "sojourners_camp",
+            imageUrl: "assets/locations/edz_sojourners_camp_3.avif",
             difficulty: "hard",
             submittedBy: "bray.tech public repo"
         },
@@ -1374,6 +1393,446 @@ const locations = {
             imageUrl: "assets/locations/venus_vault_of_glass_1.avif",
             difficulty: "easy",
             submittedBy: "OfficiallySp"
+        },
+        {
+            id: 146,
+            destination: "tower",
+            area: "hangar   ",
+            imageUrl: "assets/locations/tower_hangar_1.avif",
+            difficulty: "easy",
+            submittedBy: "OfficiallySp"
+        },
+        {
+            id: 147,
+            destination: "cosmodrome",
+            area: "skywatch",
+            imageUrl: "assets/locations/cosmodrome_skywatch_3.avif",
+            difficulty: "hard",
+            submittedBy: "OfficiallySp"
+        },
+        {
+            id: 148,
+            destination: "edz",
+            area: "salt_mines",
+            imageUrl: "assets/locations/edz_salt_mines_1.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 149,
+            destination: "edz",
+            area: "salt_mines",
+            imageUrl: "assets/locations/edz_salt_mines_2.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 150,
+            destination: "edz",
+            area: "salt_mines",
+            imageUrl: "assets/locations/edz_salt_mines_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 151,
+            destination: "edz",
+            area: "maevic_square",
+            imageUrl: "assets/locations/edz_maevic_square_1.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 152,
+            destination: "edz",
+            area: "maevic_square",
+            imageUrl: "assets/locations/edz_maevic_square_2.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 153,
+            destination: "edz",
+            area: "maevic_square",
+            imageUrl: "assets/locations/edz_maevic_square_3.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 154,
+            destination: "titan",
+            area: "solarium",
+            imageUrl: "assets/locations/titan_solarium_1.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 155,
+            destination: "titan",
+            area: "sinking_docks",
+            imageUrl: "assets/locations/titan_sinking_docks_1.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 156,
+            destination: "titan",
+            area: "sinking_docks",
+            imageUrl: "assets/locations/titan_sinking_docks_2.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 157,
+            destination: "titan",
+            area: "sinking_docks",
+            imageUrl: "assets/locations/titan_sinking_docks_3.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 158,
+            destination: "titan",
+            area: "sirens_watch",
+            imageUrl: "assets/locations/titan_sirens_watch_2.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 159,
+            destination: "titan",
+            area: "sirens_watch",
+            imageUrl: "assets/locations/titan_sirens_watch_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 160,
+            destination: "titan",
+            area: "sirens_watch",
+            imageUrl: "assets/locations/titan_sirens_watch_4.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 161,
+            destination: "titan",
+            area: "sirens_watch",
+            imageUrl: "assets/locations/titan_sirens_watch_5.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 162,
+            destination: "edz",
+            area: "sunken_isles",
+            imageUrl: "assets/locations/edz_sunken_isles_1.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 163,
+            destination: "edz",
+            area: "sunken_isles",
+            imageUrl: "assets/locations/edz_sunken_isles_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 164,
+            destination: "edz",
+            area: "sunken_isles",
+            imageUrl: "assets/locations/edz_sunken_isles_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 165,
+            destination: "edz",
+            area: "winding_cove",
+            imageUrl: "assets/locations/edz_winding_cove_1.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 166,
+            destination: "edz",
+            area: "winding_cove",
+            imageUrl: "assets/locations/edz_winding_cove_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 167,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 168,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_4.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 169,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_5.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 170,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_6.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 171,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_7.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 172,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_2.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 173,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_3.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 174,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_4.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 175,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_5.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 176,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_6.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 177,
+            destination: "titan",
+            area: "tidal_anchor",
+            imageUrl: "assets/locations/titan_tidal_anchor_1.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 178,
+            destination: "titan",
+            area: "tidal_anchor",
+            imageUrl: "assets/locations/titan_tidal_anchor_2.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 179,
+            destination: "edz",
+            area: "trostland",
+            imageUrl: "assets/locations/edz_trostland_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 180,
+            destination: "edz",
+            area: "trostland",
+            imageUrl: "assets/locations/edz_trostland_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 181,
+            destination: "edz",
+            area: "trostland",
+            imageUrl: "assets/locations/edz_trostland_4.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 182,
+            destination: "edz",
+            area: "trostland",
+            imageUrl: "assets/locations/edz_trostland_5.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 183,
+            destination: "edz",
+            area: "trostland",
+            imageUrl: "assets/locations/edz_trostland_6.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 184,
+            destination: "edz",
+            area: "the_sludge",
+            imageUrl: "assets/locations/edz_the_sludge_6.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 185,
+            destination: "edz",
+            area: "the_sludge",
+            imageUrl: "assets/locations/edz_the_sludge_7.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 186,
+            destination: "edz",
+            area: "the_sludge",
+            imageUrl: "assets/locations/edz_the_sludge_8.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 187,
+            destination: "edz",
+            area: "the_gulch",
+            imageUrl: "assets/locations/edz_the_gulch_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 188,
+            destination: "edz",
+            area: "the_gulch",
+            imageUrl: "assets/locations/edz_the_gulch_3.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 189,
+            destination: "edz",
+            area: "the_gulch",
+            imageUrl: "assets/locations/edz_the_gulch_4.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 190,
+            destination: "edz",
+            area: "the_tunnels",
+            imageUrl: "assets/locations/edz_the_tunnels_1.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 191,
+            destination: "edz",
+            area: "the_tunnels",
+            imageUrl: "assets/locations/edz_the_tunnels_2.avif",
+            difficulty: "hard",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 192,
+            destination: "mercury",
+            area: "fields_of_glass",
+            imageUrl: "assets/locations/mercury_fields_of_glass_3.avif",
+            difficulty: "medium",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 193,
+            destination: "io",
+            area: "the_rupture",
+            imageUrl: "assets/locations/io_the_rupture_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 194,
+            destination: "titan",
+            area: "the_rig",
+            imageUrl: "assets/locations/titan_the_rig_7.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 195,
+            destination: "mars",
+            area: "braytech_futurescape",
+            imageUrl: "assets/locations/mars_braytech_futurescape_2.avif",
+            difficulty: "easy",
+            submittedBy: "bray.tech public repo"
+        },
+        {
+            id: 196,
+            destination: "io",
+            area: "giants_scar",
+            imageUrl: "assets/locations/io_giants_scar_1.avif",
+            difficulty: "hard",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 197,
+            destination: "unknown_space",
+            area: "eternity",
+            imageUrl: "assets/locations/unknown_space_eternity_1.avif",
+            difficulty: "easy",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 198,
+            destination: "unknown_space",
+            area: "eternity",
+            imageUrl: "assets/locations/unknown_space_eternity_2.avif",
+            difficulty: "easy",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 199,
+            destination: "unknown_space",
+            area: "eternity",
+            imageUrl: "assets/locations/unknown_space_eternity_3.avif",
+            difficulty: "medium",
+            submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 200,
+            destination: "nessus",
+            area: "inverted_spire",
+            imageUrl: "assets/locations/nessus_inverted_spire_1.avif",
+            difficulty: "easy",
+            submittedBy: "@shotsofdestiny"
         }
     ]
 };

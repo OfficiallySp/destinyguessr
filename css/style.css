@@ -932,3 +932,73 @@ input:checked + .toggle-slider {
 input:checked + .toggle-slider:before {
     transform: translateX(24px);
 }
+
+/* Game Modes */
+.game-modes {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.game-modes h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+}
+
+.mode-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mode-option {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.mode-option.selected {
+    border-color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 206, 41, 0.3);
+}
+
+.mode-option h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.mode-option p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.mode-icon {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.mode-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transform: rotate(5deg);
+}
