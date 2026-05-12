@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Use FormData directly for file uploads - don't convert to URLSearchParams
             const formData = new FormData(form);
 
-            fetch('/', {
+            fetch(new URL('.', window.location.href), {
                 method: 'POST',
                 body: formData
             })

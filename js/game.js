@@ -775,7 +775,7 @@ function setupReportProblem() {
             });
 
             // Submit the form using fetch
-            fetch('/', {
+            fetch(new URL('.', window.location.href), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formObject).toString()
