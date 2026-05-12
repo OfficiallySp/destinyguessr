@@ -714,7 +714,8 @@ function endGame() {
         timeElapsed: gameState.timeElapsed,
         completedAllLocations: gameState.currentRound >= gameState.totalRounds,
         perfectRun: perfectRun,
-        lastIncorrectRound: gameState.lastIncorrectRound || null
+        lastIncorrectRound: gameState.lastIncorrectRound || null,
+        results: gameState.results
     }));
 
     // Redirect to results page

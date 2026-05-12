@@ -139,7 +139,9 @@ function displayRoundResults(results, isInfiniteMode) {
     roundsContainer.innerHTML = '';
 
     // Limit the display to a reasonable number for infinite mode
-    const displayResults = isInfiniteMode && results.length > 20
+    const truncated = isInfiniteMode && results.length > 20;
+    const separatorIdx = truncated ? 10 : -1;
+    const displayResults = truncated
         ? [...results.slice(0, 10), null, ...results.slice(results.length - 10)]
         : results;
 
@@ -154,9 +156,12 @@ function displayRoundResults(results, isInfiniteMode) {
             return;
         }
 
-        const actualIndex = isInfiniteMode && index >= 10 && displayResults.includes(null)
-            ? results.length - 20 + index
-            : index;
+        let roundIdx = index;
+        if (truncated && index > separatorIdx) {
+            // After separator: indices 11..20 map to the last 10 results
+            roundIdx = results.length - 10 + (index - separatorIdx - 1);
+        }
+        const actualIndex = roundIdx;
 
         const roundElement = document.createElement('div');
         roundElement.className = 'round-result';
