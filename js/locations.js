@@ -1,238 +1,8 @@
-// DestinyGuessr - Locations Data
-
-// This file contains the database of Destiny 2 locations for the game
-// Each destination has a list of areas within it
-// Each location has a unique ID, name, and path to its image
+// DestinyGuessr - Screenshot database and scoring ranks.
+// Destination/area catalog: js/destinations.js (loaded before this file).
 
 const locations = {
-    destinations: [
-        {
-            id: "edz",
-            name: "EDZ",
-            areas: [
-                { id: "outskirts", name: "Outskirts" },
-                { id: "trostland", name: "Trostland" },
-                { id: "winding_cove", name: "Winding Cove" },
-                { id: "the_sludge", name: "The Sludge" },
-                { id: "the_gulch", name: "The Gulch" },
-                { id: "firebase_hades", name: "Firebase Hades" },
-                { id: "sunken_isles", name: "Sunken Isles" },
-                { id: "windswept_crag", name: "Windswept Crag" },
-                { id: "the_farm", name: "The Farm" },
-                { id: "salt_mines", name: "Salt Mines" },
-                { id: "maevic_square", name: "Maevic Square" },
-                { id: "sojourners_camp", name: "Sojourners Camp" },
-                { id: "niobe_labs", name: "Niobe Labs" },
-                { id: "the_tunnels", name: "The Tunnels" }
-            ]
-        },
-        {
-            id: "cosmodrome",
-            name: "Cosmodrome",
-            areas: [
-                { id: "the_steppes", name: "The Steppes" },
-                { id: "mothyards", name: "Mothyards" },
-                { id: "skywatch", name: "Skywatch" },
-                { id: "forgotten_shore", name: "Forgotten Shore" },
-                { id: "the_breach", name: "The Breach" },
-                { id: "the_divide", name: "The Divide" },
-                { id: "lunar_complex", name: "Lunar Complex" },
-                { id: "terrestrial_complex", name: "Terrestrial Complex" },
-                { id: "the_grottos", name: "The Grottos" },
-                { id: "grasp_of_avarice", name: "Grasp of Avarice" },
-            ]
-        },
-        {
-            id: "tower",
-            name: "Tower",
-            areas: [
-                { id: "courtyard", name: "Courtyard" },
-                { id: "hangar", name: "Hangar" },
-                { id: "bazaar", name: "Bazaar" },
-                { id: "annex", name: "Annex" },
-            ]
-        },
-        {
-            id: "pale_heart",
-            name: "The Pale Heart",
-            areas: [
-                { id: "landing", name: "The Landing" },
-                { id: "blooming", name: "The Blooming" },
-                { id: "impasse", name: "The Impasse" },
-                { id: "transgression", name: "The Transgression" },
-                { id: "lost_city", name: "The Lost City" },
-                { id: "substratum", name: "Substratum" },
-                { id: "maelstrom", name: "Maelstrom" },
-            ]
-        },
-        {
-            id: "moon",
-            name: "Moon",
-            areas: [
-                { id: "archers_line", name: "Archer's Line" },
-                { id: "hellmouth", name: "Hellmouth" },
-                { id: "anchor_of_light", name: "Anchor of Light" },
-                { id: "sorrows_harbor", name: "Sorrow's Harbor" },
-                { id: "sanctuary", name: "Sanctuary" },
-                { id: "scarlet_keep", name: "Scarlet Keep" },
-                { id: "lunar_battlegrounds", name: "Lunar Battlegrounds" },
-                { id: "necropolis", name: "Necropolis" },
-                { id: "derelict_leviathan", name: "Derelict Leviathan" },
-            ]
-        },
-        {
-            id: "europa",
-            name: "Europa",
-            areas: [
-                { id: "eventide_ruins", name: "Eventide Ruins" },
-                { id: "asterion_abyss", name: "Asterion Abyss" },
-                { id: "cadmus_ridge", name: "Cadmus Ridge" },
-                { id: "charons_crossing", name: "Charon's Crossing" },
-                { id: "beyond", name: "Beyond" },
-                { id: "riis_reborn", name: "Riis Reborn" },
-                { id: "glassway", name: "The Glassway" },
-                { id: "vesper_station", name: "Vesper Station" },
-            ]
-        },
-        {
-            id: "nessus",
-            name: "Nessus",
-            areas: [
-                { id: "exodus_black", name: "Exodus Black" },
-                { id: "artifact_edge", name: "Artifact's Edge" },
-                { id: "watchers_grave", name: "Watcher's Grave" },
-                { id: "glade_of_echoes", name: "Glade of Echoes" },
-                { id: "the_cistern", name: "The Cistern" },
-                { id: "the_tangle", name: "The Tangle" },
-                { id: "hallows", name: "Hallows" },
-                { id: "sunkern_cavern", name: "Sunkern Cavern" },
-                { id: "chamber_of_water", name: "Chamber of Water" },
-                { id: "well_of_flame", name: "Well of Flame" },
-                { id: "chamber_of_sky", name: "Chamber of Sky" },
-            ]
-        },
-        {
-            id: "throne_world",
-            name: "Savathûn's Throne World",
-            areas: [
-                { id: "quagmire", name: "Quagmire" },
-                { id: "miasma", name: "Miasma" },
-                { id: "florescent_canal", name: "florescent Canal" },
-                { id: "enclave", name: "The Enclave" },
-                { id: "sunkern_pyramid", name: "Sunkern Pyramid" },
-            ]
-        },
-        {
-            id: "neomuna",
-            name: "Neomuna",
-            areas: [
-                { id: "zephyr_concourse", name: "Zephyr Concourse" },
-                { id: "ahimsa_park", name: "Ahimsa Park" },
-                { id: "liming_harbor", name: "Liming Harbor" },
-                { id: "striders_gate", name: "Striders' Gate" },
-                { id: "veil_containment", name: "Veil Containment" },
-                { id: "irkalla_complex", name: "Irkalla Complex" },
-                { id: "esi_terminal", name: "Esi Terminal" },
-                { id: "mayas_retreat", name: "Maya's Retreat" },
-                { id: "typhon_imperator", name: "Typhon Imperator" },
-            ]
-        },
-        {
-            id: "dreaming_city",
-            name: "The Dreaming City",
-            areas: [
-                { id: "divalian_mists", name: "Divalian Mists" },
-                { id: "rheasilvia", name: "Rheasilvia" },
-                { id: "the_strand", name: "The Strand" },
-                { id: "spine_of_keres", name: "Spine of Keres" },
-                { id: "harbingers_seclude", name: "Harbinger's Seclude" },
-                { id: "the_confluence", name: "The Confluence" },
-                { id: "garden_esila", name: "Gardens of Esila" },
-                { id: "ascendant_plane", name: "Ascendant Plane" },
-            ]
-        },
-        {
-            id: "io",
-            name: "Io",
-            areas: [
-                { id: "lost_oasis", name: "Lost Oasis" },
-                { id: "giants_scar", name: "Giant's Scar" },
-                { id: "the_rupture", name: "The Rupture" },
-                { id: "pyramidion", name: "Pyramidion" },
-            ]
-        },
-        {
-            id: "mercury",
-            name: "Mercury",
-            areas: [
-                { id: "fields_of_glass", name: "Fields of Glass" },
-                { id: "infinite_forest", name: "The Infinite Forest" },
-            ]
-        },
-        {
-            id: "titan",
-            name: "Titan",
-            areas: [
-                { id: "sirens_watch", name: "Siren's Watch" },
-                { id: "the_rig", name: "The Rig" },
-                { id: "solarium", name: "Solarium" },
-                { id: "sinking_docks", name: "Sinking Docks" },
-                { id: "arboretum", name: "Arboretum" },
-                { id: "festering_halls", name: "Festering Halls" },
-                { id: "tidal_anchor", name: "Tidal Anchor" },
-                { id: "ghosts_of_the_deep", name: "Ghosts of the Deep" },
-            ]
-        },
-        {
-            id: "mars",
-            name: "Mars",
-            areas: [
-                { id: "ares_spire", name: "Ares Spire" },
-                { id: "glacial_drift", name: "Glacial Drift" },
-                { id: "braytech_futurescape", name: "Braytech Futurescape" },
-                { id: "olympus_decent", name: "Olympus Decent" },
-                { id: "alton_dynamo", name: "Alton Dynamo" },
-            ]
-        },
-        {
-            id: "tangled_shore",
-            name: "The Tangled Shore",
-            areas: [
-                { id: "jetsam_saturn", name: "Jetsam of Saturn" },
-                { id: "thieves_landing", name: "Thieves' Landing" },
-                { id: "fourhorn_gulch", name: "Four-horn Gulch" },
-                { id: "soriks_cut", name: "Soriks's Cut" },
-
-            ]
-        },
-        {
-            id: "dreadnaught",
-            name: "The Dreadnaught",
-            areas: [
-                { id: "hull_breach", name: "Hull Breach" },
-                { id: "mausoleum", name: "Mausoleum" },
-                { id: "hall_of_souls", name: "Hall of Souls" },
-            ]
-        },
-        {
-            id: "venus",
-            name: "Venus",
-            areas: [
-                { id: "ishtar_sink", name: "Ishtar Sink" },
-                { id: "vault_of_glass", name: "Vault of Glass" },
-            ]
-        },
-        {
-            id: "unknown_space",
-            name: "Unknown Space",
-            areas: [
-                { id: "heaven_hell", name: "Heaven/Hell" },
-                { id: "queens_court", name: "Queen's Court" },
-                { id: "eternity", name: "Eternity" },
-                { id: "third_spire", name: "The Third Spire" }
-            ]
-        }
-    ],
+    destinations: destinyDestinations,
     locationData: [
         {
             id: 1,
@@ -397,8 +167,8 @@ const locations = {
         {
             id: 21,
             destination: "europa",
-            area: "glassway",
-            imageUrl: "assets/locations/europa_glassway_2.avif",
+            area: "asterion_abyss",
+            imageUrl: "assets/locations/europa_asterion_abyss_4.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -469,8 +239,8 @@ const locations = {
         {
             id: 30,
             destination: "tangled_shore",
-            area: "soriks_cut",
-            imageUrl: "assets/locations/tangled_shore_soriks_cut_3.avif",
+            area: "fourhorn_gulch",
+            imageUrl: "assets/locations/tangled_shore_fourhorn_gulch_1.avif",
             difficulty: "hard",
             submittedBy: "@shotsofdestiny"
         },
@@ -734,7 +504,7 @@ const locations = {
             id: 63,
             destination: "dreaming_city",
             area: "rheasilvia",
-            imageUrl: "assets/locations/dreaming_city_rheasilvia_4.avif",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_6.avif",
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },
@@ -805,8 +575,8 @@ const locations = {
         {
             id: 72,
             destination: "moon",
-            area: "scarlet_keep",
-            imageUrl: "assets/locations/moon_scarlet_keep_2.avif",
+            area: "necropolis",
+            imageUrl: "assets/locations/moon_necropolis_1.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -1278,7 +1048,7 @@ const locations = {
             id: 131,
             destination: "nessus",
             area: "artifact_edge",
-            imageUrl: "assets/locations/nessus_artifact_edge_5.avif",
+            imageUrl: "assets/locations/nessus_artifact_edge_6.avif",
             difficulty: "medium",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
@@ -1397,7 +1167,7 @@ const locations = {
         {
             id: 146,
             destination: "tower",
-            area: "hangar   ",
+            area: "hangar",
             imageUrl: "assets/locations/tower_hangar_1.avif",
             difficulty: "easy",
             submittedBy: "OfficiallySp"
@@ -1833,6 +1603,206 @@ const locations = {
             imageUrl: "assets/locations/nessus_inverted_spire_1.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
+        },
+        {
+            id: 201,
+            destination: "moon",
+            area: "scarlet_keep",
+            imageUrl: "assets/locations/moon_scarlet_keep_6.avif",
+            difficulty: "medium",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 202,
+            destination: "neomuna",
+            area: "striders_gate",
+            imageUrl: "assets/locations/neomuna_striders_gate_2.avif",
+            difficulty: "medium",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 203,
+            destination: "neomuna",
+            area: "liming_harbor",
+            imageUrl: "assets/locations/neomuna_liming_harbor_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 204,
+            destination: "europa",
+            area: "creation",
+            imageUrl: "assets/locations/europa_creation_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 205,
+            destination: "cosmodrome",
+            area: "skywatch",
+            imageUrl: "assets/locations/cosmodrome_skywatch_4.avif",
+            difficulty: "easy",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 206,
+            destination: "cosmodrome",
+            area: "grasp_of_avarice",
+            imageUrl: "assets/locations/cosmodrome_grasp_of_avarice_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 208,
+            destination: "unknown_space",
+            area: "garden_of_salvation",
+            imageUrl: "assets/locations/unknown_space_garden_of_salvation_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 209,
+            destination: "unknown_space",
+            area: "garden_of_salvation",
+            imageUrl: "assets/locations/unknown_space_garden_of_salvation_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 210,
+            destination: "neomuna",
+            area: "root_of_nightmares",
+            imageUrl: "assets/locations/neomuna_root_of_nightmares_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/CroadNation"
+        },
+        {
+            id: 211,
+            destination: "europa",
+            area: "asterion_abyss",
+            imageUrl: "assets/locations/europa_asterion_abyss_5.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 212,
+            destination: "europa",
+            area: "charons_crossing",
+            imageUrl: "assets/locations/europa_charons_crossing_2.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 213,
+            destination: "throne_world",
+            area: "alluring_apostate",
+            imageUrl: "assets/locations/throne_world_alluring_apostate_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 214,
+            destination: "dreaming_city",
+            area: "rheasilvia",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_7.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 215,
+            destination: "dreaming_city",
+            area: "rheasilvia",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_4.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 216,
+            destination: "dreaming_city",
+            area: "the_strand",
+            imageUrl: "assets/locations/dreaming_city_the_strand_7.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 217,
+            destination: "dreaming_city",
+            area: "divalian_mists",
+            imageUrl: "assets/locations/dreaming_city_divalian_mists_9.avif",
+            difficulty: "hard",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 218,
+            destination: "dreaming_city",
+            area: "divalian_mists",
+            imageUrl: "assets/locations/dreaming_city_divalian_mists_10.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 219,
+            destination: "dreaming_city",
+            area: "garden_esila",
+            imageUrl: "assets/locations/dreaming_city_garden_esila_3.avif",
+            difficulty: "hard",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 220,
+            destination: "nessus",
+            area: "the_cistern",
+            imageUrl: "assets/locations/nessus_the_cistern_9.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 221,
+            destination: "nessus",
+            area: "artifact_edge",
+            imageUrl: "assets/locations/nessus_artifact_edge_5.avif",
+            difficulty: "medium",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 223,
+            destination: "nessus",
+            area: "hallows",
+            imageUrl: "assets/locations/nessus_hallows_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 225,
+            destination: "leviathan",
+            area: "royal_pools",
+            imageUrl: "assets/locations/leviathan_royal_pools_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Sallarran"
+        },
+        {
+            id: 226,
+            destination: "dreaming_city",
+            area: "harbingers_seclude",
+            imageUrl: "assets/locations/dreaming_city_harbingers_seclude_1.avif",
+            difficulty: "hard",
+            submittedBy: "u/Sallarran"
+        },
+        {
+            id: 227,
+            destination: "unknown_space",
+            area: "dares_of_eternity",
+            imageUrl: "assets/locations/unknown_space_dares_of_eternity_1.avif",
+            difficulty: "medium",
+            submittedBy: "u/Sallarran"
+        },
+        {
+            id: 230,
+            destination: "unknown_space",
+            area: "eternity",
+            imageUrl: "assets/locations/unknown_space_eternity_4.avif",
+            difficulty: "medium",
+            submittedBy: "u/Sallarran"
         }
     ]
 };

@@ -326,8 +326,10 @@ function generateDestinationOptions() {
     // Clear existing options
     destinationOptionsContainer.innerHTML = '';
 
-    // Create a destination option for each destination
-    locations.destinations.forEach(destination => {
+    // Create a destination option for each destination (alphabetical)
+    [...locations.destinations]
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach(destination => {
         const option = document.createElement('div');
         option.className = 'destination-option';
         option.dataset.id = destination.id;
@@ -379,8 +381,10 @@ function generateAreaOptions(destinationId) {
     // Find destination
     const destination = locations.destinations.find(dest => dest.id === destinationId);
 
-    // Create an area option for each area
-    destination.areas.forEach(area => {
+    // Create an area option for each area (alphabetical)
+    [...destination.areas]
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach(area => {
         const option = document.createElement('div');
         option.className = 'area-option';
         option.dataset.id = area.id;
@@ -733,7 +737,8 @@ function getAreaName(destinationId, areaId) {
     const destination = locations.destinations.find(dest => dest.id === destinationId);
     if (!destination) return 'Unknown Area';
 
-    const area = destination.areas.find(a => a.id === areaId);
+    const normalizedAreaId = typeof areaId === 'string' ? areaId.trim() : areaId;
+    const area = destination.areas.find(a => a.id === normalizedAreaId);
     return area ? area.name : 'Unknown Area';
 }
 

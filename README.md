@@ -27,7 +27,7 @@ A Destiny 2-themed location guessing game inspired by GeoGuessr. Test your knowl
    ```
    For example: `assets/locations/dreaming_city_divalian_mists_1.avif`
 
-4. Update the `locationData` array in `js/locations.js` with entries for your screenshots
+4. Update the `locationData` array in `js/locations.js` with entries for your screenshots (destination/area IDs must exist in `js/destinations.js`)
 
 
 ## Adding Your Own Screenshots
