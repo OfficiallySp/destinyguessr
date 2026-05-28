@@ -572,6 +572,10 @@ function showRoundResult() {
                             <input type="radio" name="issueType" value="not-loading" required>
                             Picture not loading
                         </label>
+                        <label>
+                            <input type="radio" name="issueType" value="duplicate-image" required>
+                            Duplicate image
+                        </label>
                     </div>
                 </p>
                 <p>
@@ -636,6 +640,10 @@ function showTimeoutResult() {
                         <label>
                             <input type="radio" name="issueType" value="not-loading" required>
                             Picture not loading
+                        </label>
+                        <label>
+                            <input type="radio" name="issueType" value="duplicate-image" required>
+                            Duplicate image
                         </label>
                     </div>
                 </p>
