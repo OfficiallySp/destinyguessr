@@ -1653,6 +1653,14 @@ const locations = {
             submittedBy: "u/CroadNation"
         },
         {
+            id: 207,
+            destination: "nessus",
+            area: "glade_of_echoes",
+            imageUrl: "assets/locations/nessus_glade_of_echoes_7.avif",
+            difficulty: "medium",
+            submittedBy: "u/CroadNation"
+        },
+        {
             id: 208,
             destination: "unknown_space",
             area: "garden_of_salvation",
@@ -1765,10 +1773,26 @@ const locations = {
             submittedBy: "u/FloydknightArt"
         },
         {
+            id: 222,
+            destination: "nessus",
+            area: "exodus_black",
+            imageUrl: "assets/locations/nessus_exodus_black_7.avif",
+            difficulty: "easy",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
             id: 223,
             destination: "nessus",
             area: "hallows",
             imageUrl: "assets/locations/nessus_hallows_2.avif",
+            difficulty: "hard",
+            submittedBy: "u/FloydknightArt"
+        },
+        {
+            id: 224,
+            destination: "pale_heart",
+            area: "impasse",
+            imageUrl: "assets/locations/pale_heart_impasse_1.avif",
             difficulty: "hard",
             submittedBy: "u/FloydknightArt"
         },
@@ -1794,6 +1818,22 @@ const locations = {
             area: "dares_of_eternity",
             imageUrl: "assets/locations/unknown_space_dares_of_eternity_1.avif",
             difficulty: "medium",
+            submittedBy: "u/Sallarran"
+        },
+        {
+            id: 228,
+            destination: "europa",
+            area: "eventide_ruins",
+            imageUrl: "assets/locations/europa_eventide_ruins_2.avif",
+            difficulty: "easy",
+            submittedBy: "u/Sallarran"
+        },
+        {
+            id: 229,
+            destination: "tower",
+            area: "courtyard",
+            imageUrl: "assets/locations/tower_courtyard_1.avif",
+            difficulty: "easy",
             submittedBy: "u/Sallarran"
         },
         {
