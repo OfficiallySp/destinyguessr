@@ -504,7 +504,7 @@ const locations = {
             id: 63,
             destination: "dreaming_city",
             area: "rheasilvia",
-            imageUrl: "assets/locations/dreaming_city_rheasilvia_6.avif",
+            imageUrl: "assets/locations/dreaming_city_the_strand_5.avif",
             difficulty: "medium",
             submittedBy: "@shotsofdestiny"
         },
@@ -576,7 +576,7 @@ const locations = {
             id: 72,
             destination: "moon",
             area: "necropolis",
-            imageUrl: "assets/locations/moon_necropolis_1.avif",
+            imageUrl: "assets/locations/moon_sorrows_harbor_5.avif",
             difficulty: "easy",
             submittedBy: "@shotsofdestiny"
         },
@@ -1048,7 +1048,7 @@ const locations = {
             id: 131,
             destination: "nessus",
             area: "artifact_edge",
-            imageUrl: "assets/locations/nessus_artifact_edge_6.avif",
+            imageUrl: "assets/locations/nessus_the_cistern_8.avif",
             difficulty: "medium",
             submittedBy: "u/Totally_Not_A_Bot_FR"
         },
@@ -1616,7 +1616,7 @@ const locations = {
             id: 202,
             destination: "neomuna",
             area: "striders_gate",
-            imageUrl: "assets/locations/neomuna_striders_gate_2.avif",
+            imageUrl: "assets/locations/neomuna_zephyr_concourse_1.avif",
             difficulty: "medium",
             submittedBy: "u/CroadNation"
         },
@@ -1649,22 +1649,22 @@ const locations = {
             destination: "cosmodrome",
             area: "grasp_of_avarice",
             imageUrl: "assets/locations/cosmodrome_grasp_of_avarice_1.avif",
-            difficulty: "hard",
+            difficulty: "medium",
             submittedBy: "u/CroadNation"
         },
         {
             id: 208,
             destination: "unknown_space",
             area: "garden_of_salvation",
-            imageUrl: "assets/locations/unknown_space_garden_of_salvation_1.avif",
-            difficulty: "hard",
+            imageUrl: "assets/locations/nessus_chamber_of_water_2.avif",
+            difficulty: "medium",
             submittedBy: "u/CroadNation"
         },
         {
             id: 209,
             destination: "unknown_space",
             area: "garden_of_salvation",
-            imageUrl: "assets/locations/unknown_space_garden_of_salvation_2.avif",
+            imageUrl: "assets/locations/nessus_sunkern_cavern_2.avif",
             difficulty: "hard",
             submittedBy: "u/CroadNation"
         },
@@ -1672,7 +1672,7 @@ const locations = {
             id: 210,
             destination: "neomuna",
             area: "root_of_nightmares",
-            imageUrl: "assets/locations/neomuna_root_of_nightmares_1.avif",
+            imageUrl: "assets/locations/pale_heart_blooming_1.avif",
             difficulty: "medium",
             submittedBy: "u/CroadNation"
         },
@@ -1680,7 +1680,7 @@ const locations = {
             id: 211,
             destination: "europa",
             area: "asterion_abyss",
-            imageUrl: "assets/locations/europa_asterion_abyss_5.avif",
+            imageUrl: "assets/locations/europa_eventide_ruins_1.avif",
             difficulty: "medium",
             submittedBy: "u/FloydknightArt"
         },
@@ -1688,15 +1688,15 @@ const locations = {
             id: 212,
             destination: "europa",
             area: "charons_crossing",
-            imageUrl: "assets/locations/europa_charons_crossing_2.avif",
-            difficulty: "medium",
+            imageUrl: "assets/locations/europa_cadmus_ridge_1.avif",
+            difficulty: "easy",
             submittedBy: "u/FloydknightArt"
         },
         {
             id: 213,
             destination: "throne_world",
             area: "alluring_apostate",
-            imageUrl: "assets/locations/throne_world_alluring_apostate_1.avif",
+            imageUrl: "assets/locations/throne_world_florescent_canal_6.avif",
             difficulty: "medium",
             submittedBy: "u/FloydknightArt"
         },
@@ -1704,7 +1704,7 @@ const locations = {
             id: 214,
             destination: "dreaming_city",
             area: "rheasilvia",
-            imageUrl: "assets/locations/dreaming_city_rheasilvia_7.avif",
+            imageUrl: "assets/locations/dreaming_city_divalian_mists_8.avif",
             difficulty: "medium",
             submittedBy: "u/FloydknightArt"
         },
@@ -1720,7 +1720,7 @@ const locations = {
             id: 216,
             destination: "dreaming_city",
             area: "the_strand",
-            imageUrl: "assets/locations/dreaming_city_the_strand_7.avif",
+            imageUrl: "assets/locations/dreaming_city_garden_esila_2.avif",
             difficulty: "medium",
             submittedBy: "u/FloydknightArt"
         },
@@ -1728,7 +1728,7 @@ const locations = {
             id: 217,
             destination: "dreaming_city",
             area: "divalian_mists",
-            imageUrl: "assets/locations/dreaming_city_divalian_mists_9.avif",
+            imageUrl: "assets/locations/dreaming_city_spine_of_keres_2.avif",
             difficulty: "hard",
             submittedBy: "u/FloydknightArt"
         },
@@ -1736,7 +1736,7 @@ const locations = {
             id: 218,
             destination: "dreaming_city",
             area: "divalian_mists",
-            imageUrl: "assets/locations/dreaming_city_divalian_mists_10.avif",
+            imageUrl: "assets/locations/dreaming_city_the_strand_6.avif",
             difficulty: "medium",
             submittedBy: "u/FloydknightArt"
         },
@@ -1744,7 +1744,7 @@ const locations = {
             id: 219,
             destination: "dreaming_city",
             area: "garden_esila",
-            imageUrl: "assets/locations/dreaming_city_garden_esila_3.avif",
+            imageUrl: "assets/locations/dreaming_city_rheasilvia_5.avif",
             difficulty: "hard",
             submittedBy: "u/FloydknightArt"
         },
@@ -1784,7 +1784,7 @@ const locations = {
             id: 226,
             destination: "dreaming_city",
             area: "harbingers_seclude",
-            imageUrl: "assets/locations/dreaming_city_harbingers_seclude_1.avif",
+            imageUrl: "assets/locations/unknown_space_queens_court_1.avif",
             difficulty: "hard",
             submittedBy: "u/Sallarran"
         },
@@ -1792,7 +1792,7 @@ const locations = {
             id: 227,
             destination: "unknown_space",
             area: "dares_of_eternity",
-            imageUrl: "assets/locations/unknown_space_dares_of_eternity_1.avif",
+            imageUrl: "assets/locations/europa_beyond_2.avif",
             difficulty: "medium",
             submittedBy: "u/Sallarran"
         },
